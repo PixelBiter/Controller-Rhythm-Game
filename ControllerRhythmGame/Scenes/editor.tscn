@@ -1,0 +1,526 @@
+[gd_scene load_steps=22 format=3 uid="uid://d11lui8mvr78l"]
+
+[ext_resource type="PackedScene" uid="uid://dsjdhpy6x034o" path="res://main_scene.tscn" id="1_fv8qi"]
+[ext_resource type="Script" path="res://Scripts/editor.gd" id="1_njtfb"]
+[ext_resource type="Texture2D" uid="uid://co1oe44wha5dr" path="res://BaseStyle/Sprites/Editor/NoteSelect.png" id="3_ap2l8"]
+[ext_resource type="Texture2D" uid="uid://b45mfcyfmetj5" path="res://BaseStyle/Sprites/Editor/NoteSelectHighlight.png" id="4_47sp7"]
+[ext_resource type="Texture2D" uid="uid://cnfo2msl71mmv" path="res://BaseStyle/Sprites/Editor/LayoutA.png" id="5_munk8"]
+[ext_resource type="Texture2D" uid="uid://ensnxgab4wu" path="res://BaseStyle/Sprites/Editor/ToggleBar.png" id="7_ynfwm"]
+[ext_resource type="Texture2D" uid="uid://wsik5j72vsi" path="res://BaseStyle/Sprites/Editor/LayoutB.png" id="8_032vu"]
+[ext_resource type="Texture2D" uid="uid://df6eas08ger8d" path="res://BaseStyle/Sprites/Editor/YES.png" id="9_awavx"]
+[ext_resource type="Texture2D" uid="uid://c124aq12xc2ms" path="res://BaseStyle/Sprites/Editor/DeletionMenu.png" id="10_vwfqj"]
+[ext_resource type="FontFile" uid="uid://bl7dl26nc1nyr" path="res://foo.ttf" id="11_ns4j0"]
+[ext_resource type="Texture2D" uid="uid://b4rgq7cmd4pe7" path="res://BaseStyle/Sprites/Editor/AddButton.png" id="11_qh4rn"]
+[ext_resource type="Texture2D" uid="uid://dentgn0jmj3h0" path="res://BaseStyle/Sprites/Editor/SaveButton.png" id="12_llh63"]
+[ext_resource type="Texture2D" uid="uid://dlr81moo5mx2d" path="res://BaseStyle/Sprites/Editor/Arrow.png" id="13_x1k13"]
+[ext_resource type="Texture2D" uid="uid://54w6la75xnby" path="res://BaseStyle/Sprites/Editor/RemoveButton.png" id="14_5rpj8"]
+[ext_resource type="Texture2D" uid="uid://vuru0piowle" path="res://BaseStyle/Sprites/Notes/BarBigBeat.png" id="15_nl225"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rssma"]
+size = Vector2(14, 14)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_thqe2"]
+size = Vector2(14, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l1nva"]
+size = Vector2(40, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fnkbx"]
+size = Vector2(50.6667, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_glej5"]
+size = Vector2(22.3333, 44)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2q62i"]
+size = Vector2(50.6667, 20)
+
+[node name="Editor" type="Node2D"]
+scale = Vector2(3, 3)
+script = ExtResource("1_njtfb")
+
+[node name="SquidBeatzPC" parent="." instance=ExtResource("1_fv8qi")]
+scale = Vector2(1, 1)
+
+[node name="DANCING" parent="SquidBeatzPC/Style" index="8"]
+visible = false
+
+[node name="BackgroundUpgrade" parent="SquidBeatzPC" index="4"]
+visible = false
+
+[node name="Bars" parent="SquidBeatzPC" index="5"]
+visible = false
+
+[node name="Bars2" parent="SquidBeatzPC" index="6"]
+visible = false
+
+[node name="Bars3" parent="SquidBeatzPC" index="7"]
+visible = false
+
+[node name="Bars4" parent="SquidBeatzPC" index="8"]
+visible = false
+
+[node name="Bars5" parent="SquidBeatzPC" index="9"]
+visible = false
+
+[node name="Bars6" parent="SquidBeatzPC" index="10"]
+visible = false
+
+[node name="Bars7" parent="SquidBeatzPC" index="11"]
+visible = false
+
+[node name="Bars8" parent="SquidBeatzPC" index="12"]
+visible = false
+
+[node name="Bars9" parent="SquidBeatzPC" index="13"]
+visible = false
+
+[node name="Bars10" parent="SquidBeatzPC" index="14"]
+visible = false
+
+[node name="Bars11" parent="SquidBeatzPC" index="15"]
+visible = false
+
+[node name="Bars12" parent="SquidBeatzPC" index="16"]
+visible = false
+
+[node name="Bars13" parent="SquidBeatzPC" index="17"]
+visible = false
+
+[node name="Bars14" parent="SquidBeatzPC" index="18"]
+visible = false
+
+[node name="Bars15" parent="SquidBeatzPC" index="19"]
+visible = false
+
+[node name="Bars16" parent="SquidBeatzPC" index="20"]
+visible = false
+
+[node name="Camera2D" parent="SquidBeatzPC" index="21"]
+visible = false
+
+[node name="Visual" type="Node2D" parent="."]
+
+[node name="NoteSelect" type="Sprite2D" parent="Visual"]
+position = Vector2(94, 64)
+texture = ExtResource("3_ap2l8")
+
+[node name="TextEdit" type="TextEdit" parent="Visual/NoteSelect"]
+z_index = -1
+offset_left = -82.0
+offset_top = -22.0
+offset_right = 82.0
+offset_bottom = 23.0
+editable = false
+
+[node name="NoteSelectHighlight" type="Sprite2D" parent="Visual"]
+position = Vector2(94, 69.5)
+texture = ExtResource("4_47sp7")
+vframes = 10
+frame = 9
+
+[node name="LayoutA" type="Sprite2D" parent="Visual"]
+z_index = -1
+position = Vector2(142, 120)
+texture = ExtResource("5_munk8")
+
+[node name="PlacementCurrent" type="Node2D" parent="Visual/LayoutA"]
+position = Vector2(-142, -120)
+
+[node name="Label" type="Label" parent="Visual/LayoutA/PlacementCurrent"]
+offset_left = 27.6667
+offset_top = 99.0
+offset_right = 83.6667
+offset_bottom = 122.0
+theme_override_fonts/font = ExtResource("11_ns4j0")
+theme_override_font_sizes/font_size = 12
+text = "Placement"
+
+[node name="TextEdit" type="TextEdit" parent="Visual/LayoutA/PlacementCurrent"]
+offset_left = 16.0
+offset_top = 112.0
+offset_right = 93.0
+offset_bottom = 141.0
+theme_override_fonts/font = ExtResource("11_ns4j0")
+theme_override_font_sizes/font_size = 20
+text = "0.5"
+placeholder_text = "Hello (:"
+
+[node name="BPMCurrent" type="Node2D" parent="Visual/LayoutA"]
+position = Vector2(-142, -120)
+
+[node name="Label" type="Label" parent="Visual/LayoutA/BPMCurrent"]
+offset_left = 129.333
+offset_top = 98.6667
+offset_right = 185.333
+offset_bottom = 121.667
+theme_override_fonts/font = ExtResource("11_ns4j0")
+theme_override_font_sizes/font_size = 12
+text = "BPM"
+
+[node name="TextEdit" type="TextEdit" parent="Visual/LayoutA/BPMCurrent"]
+offset_left = 103.667
+offset_top = 112.0
+offset_right = 180.667
+offset_bottom = 141.0
+theme_override_fonts/font = ExtResource("11_ns4j0")
+theme_override_font_sizes/font_size = 20
+text = "100"
+placeholder_text = "BPM"
+metadata/_edit_use_anchors_ = true
+
+[node name="SigCurrent" type="Node2D" parent="Visual/LayoutA"]
+position = Vector2(-142, -120)
+
+[node name="Label" type="Label" parent="Visual/LayoutA/SigCurrent"]
+offset_left = 202.333
+offset_top = 98.6667
+offset_right = 258.333
+offset_bottom = 121.667
+theme_override_fonts/font = ExtResource("11_ns4j0")
+theme_override_font_sizes/font_size = 12
+text = "TIME SIG."
+
+[node name="TextEdit" type="TextEdit" parent="Visual/LayoutA/SigCurrent"]
+offset_left = 190.0
+offset_top = 112.0
+offset_right = 227.0
+offset_bottom = 141.0
+theme_override_fonts/font = ExtResource("11_ns4j0")
+theme_override_font_sizes/font_size = 20
+text = "4"
+placeholder_text = "U"
+
+[node name="TextEdit2" type="TextEdit" parent="Visual/LayoutA/SigCurrent"]
+offset_left = 228.667
+offset_top = 112.0
+offset_right = 265.667
+offset_bottom = 141.0
+theme_override_fonts/font = ExtResource("11_ns4j0")
+theme_override_font_sizes/font_size = 20
+text = "4"
+placeholder_text = "D"
+
+[node name="ToggleBar" type="Sprite2D" parent="Visual/LayoutA/SigCurrent"]
+position = Vector2(263, 104)
+texture = ExtResource("7_ynfwm")
+hframes = 2
+
+[node name="BarC" type="Area2D" parent="Visual/LayoutA/SigCurrent/ToggleBar"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Visual/LayoutA/SigCurrent/ToggleBar/BarC"]
+shape = SubResource("RectangleShape2D_rssma")
+
+[node name="LayoutB" type="Sprite2D" parent="Visual"]
+position = Vector2(370, 121)
+texture = ExtResource("8_032vu")
+
+[node name="Titles" type="Node2D" parent="Visual/LayoutB"]
+
+[node name="Settings" type="Label" parent="Visual/LayoutB/Titles"]
+offset_left = -62.3333
+offset_top = -76.6667
+offset_right = 67.6667
+offset_bottom = -53.6667
+theme_override_fonts/font = ExtResource("11_ns4j0")
+text = "INITIAL SETTINGS"
+
+[node name="BPM" type="Label" parent="Visual/LayoutB/Titles"]
+offset_left = -63.0
+offset_top = -56.3334
+offset_right = 67.0
+offset_bottom = -33.3334
+theme_override_fonts/font = ExtResource("11_ns4j0")
+theme_override_font_sizes/font_size = 15
+text = "BPM"
+
+[node name="TimeSig" type="Label" parent="Visual/LayoutB/Titles"]
+offset_left = 18.3333
+offset_top = -56.3333
+offset_right = 148.333
+offset_bottom = -33.3333
+theme_override_fonts/font = ExtResource("11_ns4j0")
+theme_override_font_sizes/font_size = 15
+text = "TIME SIG
+"
+
+[node name="Totalbars" type="Label" parent="Visual/LayoutB/Titles"]
+offset_left = -64.3333
+offset_top = -11.3333
+offset_right = 65.6667
+offset_bottom = 11.6667
+theme_override_fonts/font = ExtResource("11_ns4j0")
+theme_override_font_sizes/font_size = 15
+text = "BARS"
+
+[node name="Name" type="Label" parent="Visual/LayoutB/Titles"]
+visible = false
+offset_left = -67.0
+offset_top = 35.3333
+offset_right = 63.0
+offset_bottom = 58.3333
+theme_override_fonts/font = ExtResource("11_ns4j0")
+theme_override_font_sizes/font_size = 15
+text = "NAME"
+
+[node name="Location" type="Label" parent="Visual/LayoutB/Titles"]
+visible = false
+offset_left = -67.0
+offset_top = 56.6667
+offset_right = 63.0
+offset_bottom = 79.6667
+theme_override_fonts/font = ExtResource("11_ns4j0")
+theme_override_font_sizes/font_size = 15
+text = "SONG"
+
+[node name="Dance" type="Label" parent="Visual/LayoutB/Titles"]
+offset_left = 21.6667
+offset_top = -11.3333
+offset_right = 151.667
+offset_bottom = 11.6667
+theme_override_fonts/font = ExtResource("11_ns4j0")
+theme_override_font_sizes/font_size = 15
+text = "DANCE"
+
+[node name="BPMInital" type="Node2D" parent="Visual/LayoutB"]
+position = Vector2(-370, -121)
+scale = Vector2(0.333, 0.333)
+
+[node name="TextEdit" type="TextEdit" parent="Visual/LayoutB/BPMInital"]
+offset_left = 852.853
+offset_top = 248.248
+offset_right = 1098.85
+offset_bottom = 300.248
+theme_override_fonts/font = ExtResource("11_ns4j0")
+theme_override_font_sizes/font_size = 30
+text = "100"
+placeholder_text = "Hi Again"
+
+[node name="SigInital" type="Node2D" parent="Visual/LayoutB"]
+position = Vector2(-370, -121)
+scale = Vector2(0.333, 0.333)
+
+[node name="TextEdit" type="TextEdit" parent="Visual/LayoutB/SigInital"]
+offset_left = 1172.17
+offset_top = 247.247
+offset_right = 1243.17
+offset_bottom = 313.247
+theme_override_fonts/font = ExtResource("11_ns4j0")
+theme_override_font_sizes/font_size = 50
+text = "4"
+placeholder_text = "U"
+
+[node name="TextEdit2" type="TextEdit" parent="Visual/LayoutB/SigInital"]
+offset_left = 1256.25
+offset_top = 247.247
+offset_right = 1327.25
+offset_bottom = 313.247
+theme_override_fonts/font = ExtResource("11_ns4j0")
+theme_override_font_sizes/font_size = 50
+text = "4"
+placeholder_text = "D"
+
+[node name="BarsTotal" type="Node2D" parent="Visual/LayoutB"]
+position = Vector2(-370, -121)
+scale = Vector2(0.333, 0.333)
+
+[node name="BarTotal" type="TextEdit" parent="Visual/LayoutB/BarsTotal"]
+offset_left = 920.0
+offset_top = 382.0
+offset_right = 1037.0
+offset_bottom = 447.0
+theme_override_fonts/font = ExtResource("11_ns4j0")
+theme_override_font_sizes/font_size = 40
+text = "10"
+
+[node name="Yes" type="Sprite2D" parent="Visual/LayoutB/BarsTotal"]
+position = Vector2(1066.07, 413.413)
+scale = Vector2(3.003, 3.003)
+texture = ExtResource("9_awavx")
+
+[node name="BarsTotal" type="Area2D" parent="Visual/LayoutB/BarsTotal/Yes"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Visual/LayoutB/BarsTotal/Yes/BarsTotal"]
+position = Vector2(-9.15527e-05, 0)
+shape = SubResource("RectangleShape2D_thqe2")
+
+[node name="Bars" type="Label" parent="Visual/LayoutB/BarsTotal"]
+offset_left = 853.0
+offset_top = 379.0
+offset_right = 918.0
+offset_bottom = 412.0
+theme_override_fonts/font = ExtResource("11_ns4j0")
+theme_override_font_sizes/font_size = 25
+text = "10"
+horizontal_alignment = 1
+
+[node name="Name" type="Node2D" parent="Visual/LayoutB"]
+position = Vector2(-370, -121)
+scale = Vector2(0.333, 0.333)
+
+[node name="TextEdit" type="TextEdit" parent="Visual/LayoutB/Name"]
+offset_left = 903.0
+offset_top = 469.0
+offset_right = 1372.0
+offset_bottom = 521.0
+theme_override_fonts/font = ExtResource("11_ns4j0")
+theme_override_font_sizes/font_size = 30
+text = "Placeholder Name"
+placeholder_text = "Name Of Song Here"
+
+[node name="Location" type="Node2D" parent="Visual/LayoutB"]
+position = Vector2(-370, -121)
+scale = Vector2(0.333, 0.333)
+
+[node name="SongLocation" type="OptionButton" parent="Visual/LayoutB/Location"]
+offset_left = 908.0
+offset_top = 543.996
+offset_right = 1369.0
+offset_bottom = 580.996
+theme_override_fonts/font = ExtResource("11_ns4j0")
+theme_override_font_sizes/font_size = 24
+
+[node name="Dance" type="Node2D" parent="Visual/LayoutB"]
+position = Vector2(-370, -121)
+scale = Vector2(0.333, 0.333)
+
+[node name="Dances" type="OptionButton" parent="Visual/LayoutB/Dance"]
+offset_left = 1128.0
+offset_top = 382.0
+offset_right = 1369.0
+offset_bottom = 413.0
+theme_override_fonts/font = ExtResource("11_ns4j0")
+theme_override_font_sizes/font_size = 22
+item_count = 1
+selected = 0
+popup/item_0/text = ""
+popup/item_0/id = 0
+
+[node name="LayoutC" type="Sprite2D" parent="Visual"]
+visible = false
+position = Vector2(142, 120)
+texture = ExtResource("10_vwfqj")
+
+[node name="Deletion" type="Node2D" parent="Visual/LayoutC"]
+position = Vector2(-142, -120)
+scale = Vector2(0.333, 0.333)
+
+[node name="BarNumber" type="Label" parent="Visual/LayoutC/Deletion"]
+offset_left = 52.0521
+offset_top = 299.299
+offset_right = 481.052
+offset_bottom = 416.299
+theme_override_fonts/font = ExtResource("11_ns4j0")
+theme_override_font_sizes/font_size = 30
+text = "Type: 10
+Position: 0.5
+Special Characteristics: [4,4,0]"
+
+[node name="SelectedDelete" type="TextEdit" parent="Visual/LayoutC/Deletion"]
+offset_left = 572.0
+offset_top = 305.0
+offset_right = 677.0
+offset_bottom = 350.0
+theme_override_fonts/font = ExtResource("11_ns4j0")
+theme_override_font_sizes/font_size = 30
+text = "0"
+placeholder_text = "Delete"
+
+[node name="NoteInBar" type="Label" parent="Visual/LayoutC/Deletion"]
+offset_left = 687.688
+offset_top = 299.299
+offset_right = 1116.69
+offset_bottom = 416.299
+theme_override_fonts/font = ExtResource("11_ns4j0")
+theme_override_font_sizes/font_size = 50
+text = "/999"
+
+[node name="BarNumber" type="Label" parent="Visual"]
+offset_left = 138.667
+offset_top = 147.333
+offset_right = 336.667
+offset_bottom = 170.333
+theme_override_fonts/font = ExtResource("11_ns4j0")
+text = "1"
+
+[node name="ButtonsA" type="Node2D" parent="."]
+
+[node name="AddButton" type="Sprite2D" parent="ButtonsA"]
+position = Vector2(200, 64)
+texture = ExtResource("11_qh4rn")
+vframes = 2
+
+[node name="Add" type="Area2D" parent="ButtonsA/AddButton"]
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ButtonsA/AddButton/Add"]
+shape = SubResource("RectangleShape2D_l1nva")
+
+[node name="SaveButton" type="Sprite2D" parent="ButtonsA"]
+position = Vector2(247, 54)
+texture = ExtResource("12_llh63")
+
+[node name="Save" type="Area2D" parent="ButtonsA/SaveButton"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ButtonsA/SaveButton/Save"]
+shape = SubResource("RectangleShape2D_fnkbx")
+
+[node name="LeftArrow" type="Sprite2D" parent="ButtonsA"]
+position = Vector2(15, 195)
+texture = ExtResource("13_x1k13")
+
+[node name="Area" type="Area2D" parent="ButtonsA/LeftArrow"]
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ButtonsA/LeftArrow/Area"]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_glej5")
+
+[node name="RightArrow" type="Sprite2D" parent="ButtonsA"]
+position = Vector2(266, 195)
+rotation = 3.14159
+texture = ExtResource("13_x1k13")
+
+[node name="Area2" type="Area2D" parent="ButtonsA/RightArrow"]
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ButtonsA/RightArrow/Area2"]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_glej5")
+
+[node name="RemoveButton" type="Sprite2D" parent="ButtonsA"]
+position = Vector2(247, 74)
+texture = ExtResource("14_5rpj8")
+vframes = 2
+
+[node name="DeleteSwitch" type="Area2D" parent="ButtonsA/RemoveButton"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ButtonsA/RemoveButton/DeleteSwitch"]
+shape = SubResource("RectangleShape2D_2q62i")
+
+[node name="BarHolding" type="Node2D" parent="."]
+position = Vector2(40, 195)
+
+[node name="NoteHolding" type="Node2D" parent="BarHolding"]
+z_index = 1
+
+[node name="BarBigBeat" type="Sprite2D" parent="BarHolding"]
+texture = ExtResource("15_nl225")
+
+[node name="BarBigBeat2" type="Sprite2D" parent="BarHolding"]
+position = Vector2(200, 0)
+texture = ExtResource("15_nl225")
+
+[node name="ReloadTimer" type="Timer" parent="."]
+wait_time = 0.001
+one_shot = true
+
+[connection signal="input_event" from="Visual/LayoutA/SigCurrent/ToggleBar/BarC" to="." method="_on_bar_c_input_event"]
+[connection signal="input_event" from="Visual/LayoutB/BarsTotal/Yes/BarsTotal" to="." method="_on_bars_total_input_event"]
+[connection signal="input_event" from="ButtonsA/AddButton/Add" to="." method="_on_add_input_event"]
+[connection signal="input_event" from="ButtonsA/SaveButton/Save" to="." method="_on_save_input_event"]
+[connection signal="input_event" from="ButtonsA/LeftArrow/Area" to="." method="_on_area_input_event"]
+[connection signal="input_event" from="ButtonsA/RightArrow/Area2" to="." method="_on_area_2_input_event"]
+[connection signal="input_event" from="ButtonsA/RemoveButton/DeleteSwitch" to="." method="_on_delete_switch_input_event"]
+[connection signal="timeout" from="ReloadTimer" to="." method="_on_reload_timer_timeout"]
+
+[editable path="SquidBeatzPC"]

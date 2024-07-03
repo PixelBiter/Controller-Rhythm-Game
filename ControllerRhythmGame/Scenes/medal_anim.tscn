@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://e6w66c3hni2o"]
+
+[ext_resource type="Script" path="res://Scripts/MedalAnim.gd" id="1_n8jeq"]
+
+[node name="MedalAnim" type="Sprite2D"]
+scale = Vector2(3, 3)
+script = ExtResource("1_n8jeq")

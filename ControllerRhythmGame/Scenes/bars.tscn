@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dsw4c2n3mjffh"]
+
+[ext_resource type="Script" path="res://Scripts/MovementBars.gd" id="1_xdecj"]
+[ext_resource type="Script" path="res://Scripts/BarSprite.gd" id="2_rca5q"]
+
+[node name="Bars" type="Node2D"]
+z_index = -2
+script = ExtResource("1_xdecj")
+
+[node name="BarSprite" type="Sprite2D" parent="."]
+script = ExtResource("2_rca5q")

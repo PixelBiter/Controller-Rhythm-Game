@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://d2431flgfls68"]
+
+[ext_resource type="Texture2D" uid="uid://w3x7apehj8m6" path="res://BaseStyle/Sprites/Notes/NoteDisplay.png" id="1_4n6fp"]
+[ext_resource type="Script" path="res://Scripts/editor_notes.gd" id="2_243e3"]
+[ext_resource type="FontFile" uid="uid://bl7dl26nc1nyr" path="res://foo.ttf" id="3_fdgwl"]
+
+[node name="EditorNotes" type="Sprite2D"]
+texture = ExtResource("1_4n6fp")
+hframes = 10
+script = ExtResource("2_243e3")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -13.0
+offset_top = -46.0
+offset_right = 27.0
+offset_bottom = -23.0
+theme_override_fonts/font = ExtResource("3_fdgwl")

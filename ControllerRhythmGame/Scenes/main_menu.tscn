@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://cqo7b1ecien0p"]
+
+[ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_nwfhw"]
+[ext_resource type="Texture2D" uid="uid://bl51mqfhc6617" path="res://BaseStyle/Sprites/Background/BackgroundNew.png" id="2_36n1g"]
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource("1_nwfhw")
+
+[node name="Splash" type="Node2D" parent="."]
+
+[node name="SplashScreen" type="Sprite2D" parent="Splash"]
+z_index = 1
+position = Vector2(320, 180)
+scale = Vector2(0.999955, 0.999938)
+vframes = 10
+
+[node name="SplashTimer" type="Timer" parent="Splash/SplashScreen"]
+wait_time = 2.0
+one_shot = true
+autostart = true
+
+[node name="FadeTimer" type="Timer" parent="Splash/SplashScreen"]
+wait_time = 0.1
+one_shot = true
+
+[node name="BackgroundNew" type="Sprite2D" parent="."]
+z_index = 4096
+position = Vector2(320, 180)
+texture = ExtResource("2_36n1g")
+
+[connection signal="timeout" from="Splash/SplashScreen/SplashTimer" to="." method="_on_splash_timer_timeout"]
+[connection signal="timeout" from="Splash/SplashScreen/FadeTimer" to="." method="_on_fade_timer_timeout"]
