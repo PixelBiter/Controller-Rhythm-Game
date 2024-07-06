@@ -112,26 +112,27 @@ func _VariableTransfers():
 		$Visual/LayoutC/Deletion/SelectedDelete.text = str(len(E.EditorDetails[1][E.CurrentBar])-1)
 
 func _NoteType():
-	if Input.is_action_just_pressed("0"):
-		E.CurrentNoteType = 10
-	if Input.is_action_just_pressed("1"):
-		E.CurrentNoteType = 1
-	if Input.is_action_just_pressed("2"):
-		E.CurrentNoteType = 2
-	if Input.is_action_just_pressed("3"):
-		E.CurrentNoteType = 3
-	if Input.is_action_just_pressed("4"):
-		E.CurrentNoteType = 4
-	if Input.is_action_just_pressed("5"):
-		E.CurrentNoteType = 5
-	if Input.is_action_just_pressed("6"):
-		E.CurrentNoteType = 6
-	if Input.is_action_just_pressed("7"):
-		E.CurrentNoteType = 7
-	if Input.is_action_just_pressed("8"):
-		E.CurrentNoteType = 8
-	if Input.is_action_just_pressed("9"):
-		E.CurrentNoteType = 9
+	if $Visual/NoteSelect/Button.button_pressed == true:
+		if Input.is_action_just_pressed("0"):
+			E.CurrentNoteType = 10
+		if Input.is_action_just_pressed("1"):
+			E.CurrentNoteType = 1
+		if Input.is_action_just_pressed("2"):
+			E.CurrentNoteType = 2
+		if Input.is_action_just_pressed("3"):
+			E.CurrentNoteType = 3
+		if Input.is_action_just_pressed("4"):
+			E.CurrentNoteType = 4
+		if Input.is_action_just_pressed("5"):
+			E.CurrentNoteType = 5
+		if Input.is_action_just_pressed("6"):
+			E.CurrentNoteType = 6
+		if Input.is_action_just_pressed("7"):
+			E.CurrentNoteType = 7
+		if Input.is_action_just_pressed("8"):
+			E.CurrentNoteType = 8
+		if Input.is_action_just_pressed("9"):
+			E.CurrentNoteType = 9
 
 func _PlaceFakeNotes():
 	for EditorNoteA in range(len(E.EditorDetails[1][E.CurrentBar])):
@@ -163,7 +164,7 @@ func _on_reload_timer_timeout():
 	E.Reload = false
 	_PlaceFakeNotes()
 	if G.Playing != true:
-		$SquidBeatzPC._resetter()
+		$main_scene._resetter()
 
 func _on_area_input_event(viewport, event, shape_idx):
 	if Input.is_action_just_pressed("Click"):
@@ -198,7 +199,9 @@ func _on_save_input_event(viewport, event, shape_idx):
 		E.songsfile = FileAccess.open(S.SongList[S.SongSelected], FileAccess.WRITE)
 		E.SaveStringed = JSON.stringify(E.SaveDict)
 		E.songsfile.store_line(E.SaveStringed)
+		E.songsfile.close()
 		E.Reload = true
+		E.Save = true
 		$ReloadTimer.start()
 
 func _on_add_input_event(viewport, event, shape_idx):

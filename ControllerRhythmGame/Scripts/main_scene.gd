@@ -9,7 +9,7 @@ var DanceSpeed = 4
 
 func _ready():
 	_StyleHolder()
-	_FileReader()
+	_FileReader(E.EditorOn)
 	_resetter()
 
 func _input(event):
@@ -191,8 +191,8 @@ func loadimage(path):
 	var loadtexture = ImageTexture.create_from_image(loadimage)
 	return loadtexture
 
-func _FileReader():
-	if E.EditorOn == false:
+func _FileReader(EditorThing):
+	if EditorThing == false:
 		SongFile = FileAccess.open(S.SongList[S.SongSelected], FileAccess.READ)
 		SongFileMore = JSON.parse_string(SongFile.get_as_text())
 		G.SongDetails[0] = SongFileMore.BPM
@@ -248,7 +248,10 @@ func _resetter():
 	G.PERFECT = true
 	ChartBar = G.BarRound
 	_MedalStuff()
-	_FileReader()
+	if E.Save == false:
+		_FileReader(E.EditorOn)
+	else:
+		_FileReader(false)
 	_AmountCounter()
 	_PreStartReader()
 

@@ -8,6 +8,6 @@ func _process(delta):
 	global_position.x = Offset + G.Offset
 	if global_position.x < -200:
 		queue_free()
-	if (G.Start > 0 and Input.is_action_just_pressed("Start")) or (Input.is_action_just_pressed("MenuLeft") and G.Playing == false) or (Input.is_action_just_pressed("MenuRight") and G.Playing == false):
+	if (G.Start > 0 and Input.is_action_just_pressed("Start")) or (Input.is_action_just_pressed("MenuLeft") and G.Playing == false) or (Input.is_action_just_pressed("MenuRight") and G.Playing == false) or E.Reload == true:
 		queue_free()
 	

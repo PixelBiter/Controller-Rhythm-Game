@@ -27,6 +27,8 @@ var CurrentSig = [4,4,0]
 var EditorExtraNote = ["",0]
 var EditorDisplayNotation = [4,4,0]
 
+var Save = false
+
 var songsfile
 var SaveStringed
 
