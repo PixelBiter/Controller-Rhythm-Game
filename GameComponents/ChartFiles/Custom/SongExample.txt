@@ -1,1 +1,0 @@
-{"Chart":[[],[[1,0],[2,0.125],[3,0.5]],[],[],[],[],[],[],[],[],[],[],[],[],[],[]],"Notations":[[4,4,0],[3,4,10]],"BPM":100,"MusicLocation":"res://Files/Music/BaseGame/13.Bouyant Boogie - Turquoise October.mp3","SongName":"13. Bouyant Boogie - Turquoise October"}

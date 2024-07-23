@@ -1,1 +1,1 @@
-{}
+{"user://ChartFiles/BaseGame/New.txt":0}
