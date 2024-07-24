@@ -128,8 +128,8 @@ func _physics_process(delta):
 				_ChartReader()
 
 func _ScoreKeeper():
-	$Style/TitleMedal/TextEnhancer/SilverLabel.text = str(G.Score[0])
-	$Style/TitleMedal/TextEnhancer/GoldLabel.text = str(G.Score[1])
+	$Style/TitleMedal/SilverLabel.text = str(G.Score[0])
+	$Style/TitleMedal/GoldLabel.text = str(G.Score[1])
 	
 	if E.EditorOn == false and G.Playing == true:
 		if G.Amount == G.Score[1] and S.Medals[S.SongList[S.SongSelected]] < 2:
@@ -162,23 +162,23 @@ func _StyleHolder():
 	$Style/BarHitterShoulder.texture = loadimage("user://Cosmetics/BaseStyle/Sprites/Background/BarHitterShoulder.png")
 	$Style/SilverMedal.texture = loadimage("user://Cosmetics/BaseStyle/Sprites/Ratings/SilverSquidSmall.png")
 	$Style/GoldMedal.texture = loadimage("user://Cosmetics/BaseStyle/Sprites/Ratings/GoldSquidSmall.png")
-	$BackgroundUpgrade.texture = loadimage("user://Cosmetics/BaseStyle/Sprites/Background/BackgroundUpgrade.png")
-	$Bars.texture = loadimage("user://Cosmetics/BaseStyle/Sprites/Menus/Bars.png")
-	$Bars2.texture = loadimage("user://Cosmetics/BaseStyle/Sprites/Menus/Bars.png")
-	$Bars3.texture = loadimage("user://Cosmetics/BaseStyle/Sprites/Menus/Bars.png")
-	$Bars4.texture = loadimage("user://Cosmetics/BaseStyle/Sprites/Menus/Bars.png")
-	$Bars5.texture = loadimage("user://Cosmetics/BaseStyle/Sprites/Menus/Bars.png")
-	$Bars6.texture = loadimage("user://Cosmetics/BaseStyle/Sprites/Menus/Bars.png")
-	$Bars7.texture = loadimage("user://Cosmetics/BaseStyle/Sprites/Menus/Bars.png")
-	$Bars8.texture = loadimage("user://Cosmetics/BaseStyle/Sprites/Menus/Bars.png")
-	$Bars9.texture = loadimage("user://Cosmetics/BaseStyle/Sprites/Menus/Bars.png")
-	$Bars10.texture = loadimage("user://Cosmetics/BaseStyle/Sprites/Menus/Bars.png")
-	$Bars11.texture = loadimage("user://Cosmetics/BaseStyle/Sprites/Menus/Bars.png")
-	$Bars12.texture = loadimage("user://Cosmetics/BaseStyle/Sprites/Menus/Bars.png")
-	$Bars13.texture = loadimage("user://Cosmetics/BaseStyle/Sprites/Menus/Bars.png")
-	$Bars14.texture = loadimage("user://Cosmetics/BaseStyle/Sprites/Menus/Bars.png")
-	$Bars15.texture = loadimage("user://Cosmetics/BaseStyle/Sprites/Menus/Bars.png")
-	$Bars16.texture = loadimage("user://Cosmetics/BaseStyle/Sprites/Menus/Bars.png")
+	$Style/BackgroundUpgrade.texture = loadimage("user://Cosmetics/BaseStyle/Sprites/Background/BackgroundUpgrade.png")
+	$Style/BackgroundUpgrade/Bars.texture = loadimage("user://Cosmetics/BaseStyle/Sprites/Menus/Bars.png")
+	$Style/BackgroundUpgrade/Bars2.texture = loadimage("user://Cosmetics/BaseStyle/Sprites/Menus/Bars.png")
+	$Style/BackgroundUpgrade/Bars3.texture = loadimage("user://Cosmetics/BaseStyle/Sprites/Menus/Bars.png")
+	$Style/BackgroundUpgrade/Bars4.texture = loadimage("user://Cosmetics/BaseStyle/Sprites/Menus/Bars.png")
+	$Style/BackgroundUpgrade/Bars5.texture = loadimage("user://Cosmetics/BaseStyle/Sprites/Menus/Bars.png")
+	$Style/BackgroundUpgrade/Bars6.texture = loadimage("user://Cosmetics/BaseStyle/Sprites/Menus/Bars.png")
+	$Style/BackgroundUpgrade/Bars7.texture = loadimage("user://Cosmetics/BaseStyle/Sprites/Menus/Bars.png")
+	$Style/BackgroundUpgrade/Bars8.texture = loadimage("user://Cosmetics/BaseStyle/Sprites/Menus/Bars.png")
+	$Style/BackgroundUpgrade/Bars9.texture = loadimage("user://Cosmetics/BaseStyle/Sprites/Menus/Bars.png")
+	$Style/BackgroundUpgrade/Bars10.texture = loadimage("user://Cosmetics/BaseStyle/Sprites/Menus/Bars.png")
+	$Style/BackgroundUpgrade/Bars11.texture = loadimage("user://Cosmetics/BaseStyle/Sprites/Menus/Bars.png")
+	$Style/BackgroundUpgrade/Bars12.texture = loadimage("user://Cosmetics/BaseStyle/Sprites/Menus/Bars.png")
+	$Style/BackgroundUpgrade/Bars13.texture = loadimage("user://Cosmetics/BaseStyle/Sprites/Menus/Bars.png")
+	$Style/BackgroundUpgrade/Bars14.texture = loadimage("user://Cosmetics/BaseStyle/Sprites/Menus/Bars.png")
+	$Style/BackgroundUpgrade/Bars15.texture = loadimage("user://Cosmetics/BaseStyle/Sprites/Menus/Bars.png")
+	$Style/BackgroundUpgrade/Bars16.texture = loadimage("user://Cosmetics/BaseStyle/Sprites/Menus/Bars.png")
 	$ButtonInputs.texture = loadimage("user://Cosmetics/BaseStyle/Sprites/Menus/ButtonInputs.png")
 	
 	$AudioPlayers/FaceA.stream = load_mp3("user://Cosmetics/BaseStyle/Audio/A.mp3")
@@ -201,7 +201,7 @@ func _FileReader(EditorThing):
 		G.SongDetails[3] = SongFileMore.MusicLocation
 		G.SongDetails[4] = SongFileMore.SongName
 		$AudioPlayers/Music.stream = load_mp3(G.SongDetails[3])
-		$Style/TitleMedal/TextEnhancer/Title.text = G.SongDetails[4]
+		$Style/TitleMedal/Title.text = G.SongDetails[4]
 		if loadimage(SongFileMore.Dance) != null:
 			$Style/DANCING.texture = loadimage(SongFileMore.Dance)
 			$Style/DANCING.hframes = S.DanceList[SongFileMore.Dance][0]
@@ -218,7 +218,7 @@ func _FileReader(EditorThing):
 		G.SongDetails[3] = E.Music
 		G.SongDetails[4] = E.Name
 		$AudioPlayers/Music.stream = load_mp3(G.SongDetails[3])
-		$Style/TitleMedal/TextEnhancer/Title.text = G.SongDetails[4]
+		$Style/TitleMedal/Title.text = G.SongDetails[4]
 
 func _SongTime():
 	G.TimeIntoSong = $AudioPlayers/Music.get_playback_position() + AudioServer.get_time_since_last_mix() - AudioServer.get_output_latency()
@@ -260,7 +260,7 @@ func _AmountCounter():
 		for j in range(len(G.SongDetails[1][i])):
 			if G.SongDetails[1][i][j][0] < 9:
 				G.Amount += 1
-	$Style/TitleMedal/TextEnhancer/TotalLabel.text = "/"+str(G.Amount)
+	$Style/TitleMedal/TotalLabel.text = "/"+str(G.Amount)
 
 func _MedalStuff():
 	if S.Medals.get(S.SongList[S.SongSelected]) == null:
@@ -311,43 +311,43 @@ func _bars():
 func _visualiser():
 	if G.Playing == true:
 		$Style/ShmoveTimer.wait_time = 60/(G.SongDetails[0]*DanceSpeed)
-		$Bars.frame = G.VisualiserBars[0]
-		$Bars2.frame = G.VisualiserBars[1]
-		$Bars3.frame = G.VisualiserBars[2]
-		$Bars4.frame = G.VisualiserBars[3]
-		$Bars5.frame = G.VisualiserBars[4]
-		$Bars6.frame = G.VisualiserBars[5]
-		$Bars7.frame = G.VisualiserBars[6]
-		$Bars8.frame = G.VisualiserBars[7]
-		$Bars9.frame = G.VisualiserBars[8]
-		$Bars10.frame = G.VisualiserBars[9]
-		$Bars11.frame = G.VisualiserBars[10]
-		$Bars12.frame = G.VisualiserBars[11]
-		$Bars13.frame = G.VisualiserBars[12]
-		$Bars14.frame = G.VisualiserBars[13]
-		$Bars15.frame = G.VisualiserBars[14]
-		$Bars16.frame = G.VisualiserBars[15]
+		$Style/BackgroundUpgrade/Bars.frame = G.VisualiserBars[0]
+		$Style/BackgroundUpgrade/Bars2.frame = G.VisualiserBars[1]
+		$Style/BackgroundUpgrade/Bars3.frame = G.VisualiserBars[2]
+		$Style/BackgroundUpgrade/Bars4.frame = G.VisualiserBars[3]
+		$Style/BackgroundUpgrade/Bars5.frame = G.VisualiserBars[4]
+		$Style/BackgroundUpgrade/Bars6.frame = G.VisualiserBars[5]
+		$Style/BackgroundUpgrade/Bars7.frame = G.VisualiserBars[6]
+		$Style/BackgroundUpgrade/Bars8.frame = G.VisualiserBars[7]
+		$Style/BackgroundUpgrade/Bars9.frame = G.VisualiserBars[8]
+		$Style/BackgroundUpgrade/Bars10.frame = G.VisualiserBars[9]
+		$Style/BackgroundUpgrade/Bars11.frame = G.VisualiserBars[10]
+		$Style/BackgroundUpgrade/Bars12.frame = G.VisualiserBars[11]
+		$Style/BackgroundUpgrade/Bars13.frame = G.VisualiserBars[12]
+		$Style/BackgroundUpgrade/Bars14.frame = G.VisualiserBars[13]
+		$Style/BackgroundUpgrade/Bars15.frame = G.VisualiserBars[14]
+		$Style/BackgroundUpgrade/Bars16.frame = G.VisualiserBars[15]
 	else:
 		$Style/ShmoveTimer.stop()
 		$Style/DANCING.frame = 0
 		$Style/ShmoveTimer.wait_time = 60/(G.SongDetails[0]*4)
 		$Style/ShmoveTimer.start()
-		$Bars.frame = 0
-		$Bars2.frame = 0
-		$Bars3.frame = 0
-		$Bars4.frame = 0
-		$Bars5.frame = 0
-		$Bars6.frame = 0
-		$Bars7.frame = 0
-		$Bars8.frame = 0
-		$Bars9.frame = 0
-		$Bars10.frame = 0
-		$Bars11.frame = 0
-		$Bars12.frame = 0
-		$Bars13.frame = 0
-		$Bars14.frame = 0
-		$Bars15.frame = 0
-		$Bars16.frame = 0
+		$Style/BackgroundUpgrade/Bars.frame = 0
+		$Style/BackgroundUpgrade/Bars2.frame = 0
+		$Style/BackgroundUpgrade/Bars3.frame = 0
+		$Style/BackgroundUpgrade/Bars4.frame = 0
+		$Style/BackgroundUpgrade/Bars5.frame = 0
+		$Style/BackgroundUpgrade/Bars6.frame = 0
+		$Style/BackgroundUpgrade/Bars7.frame = 0
+		$Style/BackgroundUpgrade/Bars8.frame = 0
+		$Style/BackgroundUpgrade/Bars9.frame = 0
+		$Style/BackgroundUpgrade/Bars10.frame = 0
+		$Style/BackgroundUpgrade/Bars11.frame = 0
+		$Style/BackgroundUpgrade/Bars12.frame = 0
+		$Style/BackgroundUpgrade/Bars13.frame = 0
+		$Style/BackgroundUpgrade/Bars14.frame = 0
+		$Style/BackgroundUpgrade/Bars15.frame = 0
+		$Style/BackgroundUpgrade/Bars16.frame = 0
 
 func _on_the_fuck_me_timer_timeout():
 	_resetter()

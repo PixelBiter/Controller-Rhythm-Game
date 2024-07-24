@@ -2,108 +2,58 @@
 
 [ext_resource type="PackedScene" uid="uid://dsjdhpy6x034o" path="res://main_scene.tscn" id="1_fv8qi"]
 [ext_resource type="Script" path="res://Scripts/editor.gd" id="1_njtfb"]
-[ext_resource type="Texture2D" uid="uid://co1oe44wha5dr" path="res://BaseStyle/Sprites/Editor/NoteSelect.png" id="3_ap2l8"]
-[ext_resource type="Texture2D" uid="uid://b45mfcyfmetj5" path="res://BaseStyle/Sprites/Editor/NoteSelectHighlight.png" id="4_47sp7"]
+[ext_resource type="Texture2D" uid="uid://dg34m3sr3yeqp" path="res://BaseStyle/Sprites/Editor/NoteSelect.png" id="3_ap2l8"]
+[ext_resource type="Texture2D" uid="uid://buf0dhulbn2dy" path="res://BaseStyle/Sprites/Editor/NoteSelectHighlight.png" id="4_47sp7"]
 [ext_resource type="Script" path="res://Scripts/ButtonDeselect.gd" id="4_vmwu2"]
-[ext_resource type="Texture2D" uid="uid://cnfo2msl71mmv" path="res://BaseStyle/Sprites/Editor/LayoutA.png" id="5_munk8"]
+[ext_resource type="Texture2D" uid="uid://bdt365ph06tjo" path="res://BaseStyle/Sprites/Editor/LayoutA.png" id="5_munk8"]
 [ext_resource type="Script" path="res://Scripts/ControlDeselect.gd" id="7_q4q5d"]
-[ext_resource type="Texture2D" uid="uid://ensnxgab4wu" path="res://BaseStyle/Sprites/Editor/ToggleBar.png" id="7_ynfwm"]
-[ext_resource type="Texture2D" uid="uid://wsik5j72vsi" path="res://BaseStyle/Sprites/Editor/LayoutB.png" id="8_032vu"]
-[ext_resource type="Texture2D" uid="uid://df6eas08ger8d" path="res://BaseStyle/Sprites/Editor/YES.png" id="9_awavx"]
-[ext_resource type="Texture2D" uid="uid://c124aq12xc2ms" path="res://BaseStyle/Sprites/Editor/DeletionMenu.png" id="10_vwfqj"]
+[ext_resource type="Texture2D" uid="uid://de4odv70hxbf5" path="res://BaseStyle/Sprites/Editor/ToggleBar.png" id="7_ynfwm"]
+[ext_resource type="Texture2D" uid="uid://1d71ayt8iunb" path="res://BaseStyle/Sprites/Editor/LayoutB.png" id="8_032vu"]
+[ext_resource type="Texture2D" uid="uid://bylax4aq1c16q" path="res://BaseStyle/Sprites/Editor/YES.png" id="9_awavx"]
+[ext_resource type="Texture2D" uid="uid://b5cy3r0sweisp" path="res://BaseStyle/Sprites/Editor/DeletionMenu.png" id="10_vwfqj"]
 [ext_resource type="FontFile" uid="uid://bl7dl26nc1nyr" path="res://foo.ttf" id="11_ns4j0"]
-[ext_resource type="Texture2D" uid="uid://b4rgq7cmd4pe7" path="res://BaseStyle/Sprites/Editor/AddButton.png" id="11_qh4rn"]
-[ext_resource type="Texture2D" uid="uid://dentgn0jmj3h0" path="res://BaseStyle/Sprites/Editor/SaveButton.png" id="12_llh63"]
-[ext_resource type="Texture2D" uid="uid://dlr81moo5mx2d" path="res://BaseStyle/Sprites/Editor/Arrow.png" id="13_x1k13"]
-[ext_resource type="Texture2D" uid="uid://54w6la75xnby" path="res://BaseStyle/Sprites/Editor/RemoveButton.png" id="14_5rpj8"]
-[ext_resource type="Texture2D" uid="uid://vuru0piowle" path="res://BaseStyle/Sprites/Notes/BarBigBeat.png" id="15_nl225"]
+[ext_resource type="Texture2D" uid="uid://60g63tat2j5o" path="res://BaseStyle/Sprites/Editor/AddButton.png" id="11_qh4rn"]
+[ext_resource type="Texture2D" uid="uid://dlopxaaytrlj5" path="res://BaseStyle/Sprites/Editor/SaveButton.png" id="12_llh63"]
+[ext_resource type="Texture2D" uid="uid://bwc3rfq6bnr6b" path="res://BaseStyle/Sprites/Editor/Arrow.png" id="13_x1k13"]
+[ext_resource type="Texture2D" uid="uid://0piyubhn4223" path="res://BaseStyle/Sprites/Editor/RemoveButton.png" id="14_5rpj8"]
+[ext_resource type="Texture2D" uid="uid://rjwqb3bjtcp1" path="res://BaseStyle/Sprites/Notes/BarBigBeat.png" id="15_nl225"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rssma"]
-size = Vector2(14, 14)
+size = Vector2(42, 42)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_thqe2"]
-size = Vector2(14, 12)
+size = Vector2(42.0001, 36)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l1nva"]
-size = Vector2(40, 40)
+size = Vector2(120, 120)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fnkbx"]
-size = Vector2(50.6667, 20)
+size = Vector2(153, 60)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_glej5"]
-size = Vector2(22.3333, 44)
+size = Vector2(65, 132)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2q62i"]
-size = Vector2(50.6667, 20)
+size = Vector2(153, 60)
 
 [node name="Editor" type="Node2D"]
-scale = Vector2(3, 3)
 script = ExtResource("1_njtfb")
 
 [node name="main_scene" parent="." instance=ExtResource("1_fv8qi")]
-scale = Vector2(1, 1)
+
+[node name="MainMenu" parent="main_scene" index="0"]
+visible = true
 
 [node name="DANCING" parent="main_scene/Style" index="8"]
 visible = false
 
-[node name="BackgroundUpgrade" parent="main_scene" index="4"]
-visible = false
-
-[node name="Bars" parent="main_scene" index="5"]
-visible = false
-
-[node name="Bars2" parent="main_scene" index="6"]
-visible = false
-
-[node name="Bars3" parent="main_scene" index="7"]
-visible = false
-
-[node name="Bars4" parent="main_scene" index="8"]
-visible = false
-
-[node name="Bars5" parent="main_scene" index="9"]
-visible = false
-
-[node name="Bars6" parent="main_scene" index="10"]
-visible = false
-
-[node name="Bars7" parent="main_scene" index="11"]
-visible = false
-
-[node name="Bars8" parent="main_scene" index="12"]
-visible = false
-
-[node name="Bars9" parent="main_scene" index="13"]
-visible = false
-
-[node name="Bars10" parent="main_scene" index="14"]
-visible = false
-
-[node name="Bars11" parent="main_scene" index="15"]
-visible = false
-
-[node name="Bars12" parent="main_scene" index="16"]
-visible = false
-
-[node name="Bars13" parent="main_scene" index="17"]
-visible = false
-
-[node name="Bars14" parent="main_scene" index="18"]
-visible = false
-
-[node name="Bars15" parent="main_scene" index="19"]
-visible = false
-
-[node name="Bars16" parent="main_scene" index="20"]
-visible = false
-
-[node name="Camera2D" parent="main_scene" index="21"]
+[node name="BackgroundUpgrade" parent="main_scene/Style" index="10"]
 visible = false
 
 [node name="Visual" type="Node2D" parent="."]
 
 [node name="NoteSelect" type="Sprite2D" parent="Visual"]
-position = Vector2(94, 64)
+position = Vector2(282, 192)
 texture = ExtResource("3_ap2l8")
 
 [node name="Button" type="Button" parent="Visual/NoteSelect"]
@@ -116,99 +66,99 @@ toggle_mode = true
 script = ExtResource("4_vmwu2")
 
 [node name="NoteSelectHighlight" type="Sprite2D" parent="Visual"]
-position = Vector2(94, 69.5)
+position = Vector2(282, 208.5)
 texture = ExtResource("4_47sp7")
 vframes = 10
 frame = 9
 
 [node name="LayoutA" type="Sprite2D" parent="Visual"]
 z_index = -1
-position = Vector2(142, 120)
+position = Vector2(426, 360)
 texture = ExtResource("5_munk8")
 
 [node name="PlacementCurrent" type="Node2D" parent="Visual/LayoutA"]
-position = Vector2(-142, -120)
+position = Vector2(-426, -360)
 
 [node name="Label" type="Label" parent="Visual/LayoutA/PlacementCurrent"]
-offset_left = 27.6667
-offset_top = 99.0
-offset_right = 83.6667
-offset_bottom = 122.0
+offset_left = 90.0
+offset_top = 292.0
+offset_right = 254.0
+offset_bottom = 336.0
 theme_override_fonts/font = ExtResource("11_ns4j0")
-theme_override_font_sizes/font_size = 12
+theme_override_font_sizes/font_size = 36
 text = "Placement"
 
 [node name="TextEdit" type="LineEdit" parent="Visual/LayoutA/PlacementCurrent"]
-offset_left = 16.0
-offset_top = 112.0
-offset_right = 93.0
-offset_bottom = 141.0
+offset_left = 77.0
+offset_top = 334.0
+offset_right = 265.0
+offset_bottom = 415.0
 theme_override_fonts/font = ExtResource("11_ns4j0")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 60
 text = "0.5"
 placeholder_text = "Hello (:"
 script = ExtResource("7_q4q5d")
 
 [node name="BPMCurrent" type="Node2D" parent="Visual/LayoutA"]
-position = Vector2(-142, -120)
+position = Vector2(-426, -360)
 
 [node name="Label" type="Label" parent="Visual/LayoutA/BPMCurrent"]
-offset_left = 129.333
-offset_top = 98.6667
-offset_right = 185.333
-offset_bottom = 121.667
+offset_left = 384.0
+offset_top = 292.0
+offset_right = 458.0
+offset_bottom = 336.0
 theme_override_fonts/font = ExtResource("11_ns4j0")
-theme_override_font_sizes/font_size = 12
+theme_override_font_sizes/font_size = 36
 text = "BPM"
 
 [node name="TextEdit" type="LineEdit" parent="Visual/LayoutA/BPMCurrent"]
-offset_left = 103.667
-offset_top = 112.0
-offset_right = 180.667
-offset_bottom = 141.0
+offset_left = 328.0
+offset_top = 334.0
+offset_right = 516.0
+offset_bottom = 415.0
 theme_override_fonts/font = ExtResource("11_ns4j0")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 60
 text = "100"
 placeholder_text = "BPM"
 script = ExtResource("7_q4q5d")
 metadata/_edit_use_anchors_ = true
 
 [node name="SigCurrent" type="Node2D" parent="Visual/LayoutA"]
-position = Vector2(-142, -120)
+position = Vector2(-426, -360)
 
 [node name="Label" type="Label" parent="Visual/LayoutA/SigCurrent"]
-offset_left = 202.333
-offset_top = 98.6667
-offset_right = 258.333
-offset_bottom = 121.667
+offset_left = 606.0
+offset_top = 292.0
+offset_right = 764.0
+offset_bottom = 336.0
 theme_override_fonts/font = ExtResource("11_ns4j0")
-theme_override_font_sizes/font_size = 12
+theme_override_font_sizes/font_size = 36
 text = "TIME SIG."
 
 [node name="TextEdit" type="TextEdit" parent="Visual/LayoutA/SigCurrent"]
-offset_left = 190.0
-offset_top = 112.0
-offset_right = 227.0
-offset_bottom = 141.0
+offset_left = 597.0
+offset_top = 337.0
+offset_right = 676.0
+offset_bottom = 414.0
 theme_override_fonts/font = ExtResource("11_ns4j0")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 60
 text = "4"
 placeholder_text = "U"
 script = ExtResource("7_q4q5d")
 
 [node name="TextEdit2" type="TextEdit" parent="Visual/LayoutA/SigCurrent"]
-offset_left = 228.667
-offset_top = 112.0
-offset_right = 265.667
-offset_bottom = 141.0
+offset_left = 686.0
+offset_top = 338.0
+offset_right = 765.0
+offset_bottom = 412.0
 theme_override_fonts/font = ExtResource("11_ns4j0")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 60
 text = "4"
 placeholder_text = "D"
 script = ExtResource("7_q4q5d")
 
 [node name="ToggleBar" type="Sprite2D" parent="Visual/LayoutA/SigCurrent"]
-position = Vector2(263, 104)
+position = Vector2(789, 312)
 texture = ExtResource("7_ynfwm")
 hframes = 2
 
@@ -218,79 +168,59 @@ hframes = 2
 shape = SubResource("RectangleShape2D_rssma")
 
 [node name="LayoutB" type="Sprite2D" parent="Visual"]
-position = Vector2(370, 121)
+position = Vector2(1110, 363)
 texture = ExtResource("8_032vu")
 
 [node name="Titles" type="Node2D" parent="Visual/LayoutB"]
 
 [node name="Settings" type="Label" parent="Visual/LayoutB/Titles"]
-offset_left = -62.3333
-offset_top = -76.6667
-offset_right = 67.6667
-offset_bottom = -53.6667
+offset_left = -110.0
+offset_top = -220.0
+offset_right = 134.0
+offset_bottom = -183.0
 theme_override_fonts/font = ExtResource("11_ns4j0")
+theme_override_font_sizes/font_size = 30
 text = "INITIAL SETTINGS"
 
 [node name="BPM" type="Label" parent="Visual/LayoutB/Titles"]
-offset_left = -63.0
-offset_top = -56.3334
-offset_right = 67.0
-offset_bottom = -33.3334
+offset_left = -172.0
+offset_top = -159.0
+offset_right = -42.0
+offset_bottom = -116.0
 theme_override_fonts/font = ExtResource("11_ns4j0")
-theme_override_font_sizes/font_size = 15
+theme_override_font_sizes/font_size = 35
 text = "BPM"
 
 [node name="TimeSig" type="Label" parent="Visual/LayoutB/Titles"]
-offset_left = 18.3333
-offset_top = -56.3333
-offset_right = 148.333
-offset_bottom = -33.3333
+offset_left = 62.0
+offset_top = -159.0
+offset_right = 246.0
+offset_bottom = -104.0
 theme_override_fonts/font = ExtResource("11_ns4j0")
-theme_override_font_sizes/font_size = 15
+theme_override_font_sizes/font_size = 35
 text = "TIME SIG
 "
 
 [node name="Totalbars" type="Label" parent="Visual/LayoutB/Titles"]
-offset_left = -64.3333
-offset_top = -11.3333
-offset_right = 65.6667
-offset_bottom = 11.6667
+offset_left = -180.0
+offset_top = -24.0
+offset_right = -50.0
+offset_bottom = 19.0
 theme_override_fonts/font = ExtResource("11_ns4j0")
-theme_override_font_sizes/font_size = 15
+theme_override_font_sizes/font_size = 35
 text = "BARS"
 
-[node name="Name" type="Label" parent="Visual/LayoutB/Titles"]
-visible = false
-offset_left = -67.0
-offset_top = 35.3333
-offset_right = 63.0
-offset_bottom = 58.3333
-theme_override_fonts/font = ExtResource("11_ns4j0")
-theme_override_font_sizes/font_size = 15
-text = "NAME"
-
-[node name="Location" type="Label" parent="Visual/LayoutB/Titles"]
-visible = false
-offset_left = -67.0
-offset_top = 56.6667
-offset_right = 63.0
-offset_bottom = 79.6667
-theme_override_fonts/font = ExtResource("11_ns4j0")
-theme_override_font_sizes/font_size = 15
-text = "SONG"
-
 [node name="Dance" type="Label" parent="Visual/LayoutB/Titles"]
-offset_left = 21.6667
-offset_top = -11.3333
-offset_right = 151.667
-offset_bottom = 11.6667
+offset_left = 74.0
+offset_top = -24.0
+offset_right = 204.0
+offset_bottom = 19.0
 theme_override_fonts/font = ExtResource("11_ns4j0")
-theme_override_font_sizes/font_size = 15
+theme_override_font_sizes/font_size = 35
 text = "DANCE"
 
 [node name="BPMInital" type="Node2D" parent="Visual/LayoutB"]
-position = Vector2(-370, -121)
-scale = Vector2(0.333, 0.333)
+position = Vector2(-1110, -363)
 
 [node name="TextEdit" type="LineEdit" parent="Visual/LayoutB/BPMInital"]
 offset_left = 852.853
@@ -304,8 +234,7 @@ placeholder_text = "Hi Again"
 script = ExtResource("7_q4q5d")
 
 [node name="SigInital" type="Node2D" parent="Visual/LayoutB"]
-position = Vector2(-370, -121)
-scale = Vector2(0.333, 0.333)
+position = Vector2(-1110, -363)
 
 [node name="TextEdit" type="TextEdit" parent="Visual/LayoutB/SigInital"]
 offset_left = 1158.0
@@ -330,8 +259,7 @@ placeholder_text = "D"
 script = ExtResource("7_q4q5d")
 
 [node name="BarsTotal" type="Node2D" parent="Visual/LayoutB"]
-position = Vector2(-370, -121)
-scale = Vector2(0.333, 0.333)
+position = Vector2(-1110, -363)
 
 [node name="BarTotal" type="LineEdit" parent="Visual/LayoutB/BarsTotal"]
 offset_left = 920.0
@@ -344,14 +272,12 @@ text = "10"
 script = ExtResource("7_q4q5d")
 
 [node name="Yes" type="Sprite2D" parent="Visual/LayoutB/BarsTotal"]
-position = Vector2(1066.07, 413.413)
-scale = Vector2(3.003, 3.003)
+position = Vector2(1074, 413)
 texture = ExtResource("9_awavx")
 
 [node name="BarsTotal" type="Area2D" parent="Visual/LayoutB/BarsTotal/Yes"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Visual/LayoutB/BarsTotal/Yes/BarsTotal"]
-position = Vector2(-9.15527e-05, 0)
 shape = SubResource("RectangleShape2D_thqe2")
 
 [node name="Bars" type="Label" parent="Visual/LayoutB/BarsTotal"]
@@ -365,8 +291,7 @@ text = "10"
 horizontal_alignment = 1
 
 [node name="Name" type="Node2D" parent="Visual/LayoutB"]
-position = Vector2(-370, -121)
-scale = Vector2(0.333, 0.333)
+position = Vector2(-1110, -363)
 
 [node name="TextEdit" type="LineEdit" parent="Visual/LayoutB/Name"]
 offset_left = 903.0
@@ -380,8 +305,7 @@ placeholder_text = "Name Of Song Here"
 script = ExtResource("7_q4q5d")
 
 [node name="Location" type="Node2D" parent="Visual/LayoutB"]
-position = Vector2(-370, -121)
-scale = Vector2(0.333, 0.333)
+position = Vector2(-1110, -363)
 
 [node name="SongLocation" type="OptionButton" parent="Visual/LayoutB/Location"]
 offset_left = 908.0
@@ -393,8 +317,7 @@ theme_override_font_sizes/font_size = 24
 script = ExtResource("7_q4q5d")
 
 [node name="Dance" type="Node2D" parent="Visual/LayoutB"]
-position = Vector2(-370, -121)
-scale = Vector2(0.333, 0.333)
+position = Vector2(-1110, -363)
 
 [node name="Dances" type="OptionButton" parent="Visual/LayoutB/Dance"]
 offset_left = 1128.0
@@ -411,12 +334,11 @@ script = ExtResource("7_q4q5d")
 
 [node name="LayoutC" type="Sprite2D" parent="Visual"]
 visible = false
-position = Vector2(142, 120)
+position = Vector2(426, 360)
 texture = ExtResource("10_vwfqj")
 
 [node name="Deletion" type="Node2D" parent="Visual/LayoutC"]
-position = Vector2(-142, -120)
-scale = Vector2(0.333, 0.333)
+position = Vector2(-426, -360)
 
 [node name="BarNumber" type="Label" parent="Visual/LayoutC/Deletion"]
 offset_left = 52.0521
@@ -460,7 +382,7 @@ text = "1"
 [node name="ButtonsA" type="Node2D" parent="."]
 
 [node name="AddButton" type="Sprite2D" parent="ButtonsA"]
-position = Vector2(200, 64)
+position = Vector2(600, 192)
 texture = ExtResource("11_qh4rn")
 vframes = 2
 
@@ -471,7 +393,7 @@ monitorable = false
 shape = SubResource("RectangleShape2D_l1nva")
 
 [node name="SaveButton" type="Sprite2D" parent="ButtonsA"]
-position = Vector2(247, 54)
+position = Vector2(741, 162)
 texture = ExtResource("12_llh63")
 
 [node name="Save" type="Area2D" parent="ButtonsA/SaveButton"]
@@ -480,18 +402,18 @@ texture = ExtResource("12_llh63")
 shape = SubResource("RectangleShape2D_fnkbx")
 
 [node name="LeftArrow" type="Sprite2D" parent="ButtonsA"]
-position = Vector2(15, 195)
+position = Vector2(45, 585)
 texture = ExtResource("13_x1k13")
 
 [node name="Area" type="Area2D" parent="ButtonsA/LeftArrow"]
 monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ButtonsA/LeftArrow/Area"]
-position = Vector2(0.5, 0)
+position = Vector2(1.5, 0)
 shape = SubResource("RectangleShape2D_glej5")
 
 [node name="RightArrow" type="Sprite2D" parent="ButtonsA"]
-position = Vector2(266, 195)
+position = Vector2(798, 585)
 rotation = 3.14159
 texture = ExtResource("13_x1k13")
 
@@ -503,7 +425,7 @@ position = Vector2(0.5, 0)
 shape = SubResource("RectangleShape2D_glej5")
 
 [node name="RemoveButton" type="Sprite2D" parent="ButtonsA"]
-position = Vector2(247, 74)
+position = Vector2(741, 222)
 texture = ExtResource("14_5rpj8")
 vframes = 2
 
@@ -513,7 +435,7 @@ vframes = 2
 shape = SubResource("RectangleShape2D_2q62i")
 
 [node name="BarHolding" type="Node2D" parent="."]
-position = Vector2(40, 195)
+position = Vector2(120, 585)
 
 [node name="NoteHolding" type="Node2D" parent="BarHolding"]
 z_index = 1
@@ -522,7 +444,7 @@ z_index = 1
 texture = ExtResource("15_nl225")
 
 [node name="BarBigBeat2" type="Sprite2D" parent="BarHolding"]
-position = Vector2(200, 0)
+position = Vector2(600, 0)
 texture = ExtResource("15_nl225")
 
 [node name="ReloadTimer" type="Timer" parent="."]

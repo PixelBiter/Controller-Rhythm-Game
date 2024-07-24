@@ -1,12 +1,12 @@
 [gd_scene load_steps=8 format=3 uid="uid://dluj2hegpfsy7"]
 
 [ext_resource type="Script" path="res://Scripts/ratings.gd" id="1_mqn27"]
-[ext_resource type="Texture2D" uid="uid://opp2bfy6o0ic" path="res://BaseStyle/Sprites/Ratings/FRESH.png" id="2_7mmaq"]
-[ext_resource type="Texture2D" uid="uid://dqx581p5sechb" path="res://BaseStyle/Sprites/Ratings/AllRatings.png" id="3_rufi3"]
+[ext_resource type="Texture2D" uid="uid://dv1q6xtc7mbol" path="res://BaseStyle/Sprites/Ratings/FRESH.png" id="2_7mmaq"]
+[ext_resource type="Texture2D" uid="uid://d1hnw1qfpfnfc" path="res://BaseStyle/Sprites/Ratings/AllRatings.png" id="3_rufi3"]
 [ext_resource type="FontFile" uid="uid://bl7dl26nc1nyr" path="res://foo.ttf" id="4_bbj6i"]
-[ext_resource type="Texture2D" uid="uid://c4ljxmg7c4i1k" path="res://BaseStyle/Sprites/Ratings/GOOD.png" id="5_uqpie"]
-[ext_resource type="Texture2D" uid="uid://dj4jvuxppsqx7" path="res://BaseStyle/Sprites/Ratings/BAD.png" id="6_8wg6j"]
-[ext_resource type="Texture2D" uid="uid://kwhp76x4d6aw" path="res://BaseStyle/Sprites/Ratings/MISS.png" id="7_m6ccb"]
+[ext_resource type="Texture2D" uid="uid://tiyui64eu3d2" path="res://BaseStyle/Sprites/Ratings/GOOD.png" id="5_uqpie"]
+[ext_resource type="Texture2D" uid="uid://di1svon2x5aox" path="res://BaseStyle/Sprites/Ratings/BAD.png" id="6_8wg6j"]
+[ext_resource type="Texture2D" uid="uid://dhqpgnsl2fhpo" path="res://BaseStyle/Sprites/Ratings/MISS.png" id="7_m6ccb"]
 
 [node name="Ratings" type="Node2D"]
 script = ExtResource("1_mqn27")

@@ -5,7 +5,7 @@ func _ready():
 	texture = loadimage("user://Cosmetics/BaseStyle/Sprites/Notes/NoteDisplay.png")
 	if E.EditorExtraNote[0] == "NOTE":
 		frame = E.EditorDetails[1][E.CurrentBar][E.EditorExtraNote[1]][0]-1
-		position.x = E.EditorDetails[1][E.CurrentBar][E.EditorExtraNote[1]][1] * 200
+		position.x = E.EditorDetails[1][E.CurrentBar][E.EditorExtraNote[1]][1] * 600
 		if frame == 8:
 			$Label.text = str(E.EditorDetails[1][E.CurrentBar][E.EditorExtraNote[1]][2])
 	else:
@@ -13,7 +13,7 @@ func _ready():
 			queue_free()
 		else:
 			texture = loadimage("user://Cosmetics/BaseStyle/Sprites/Notes/BarSmallBeat.png")
-			position.x = E.EditorExtraNote[1] * 200
+			position.x = E.EditorExtraNote[1] * 600
 
 func _process(delta):
 	if E.CurrentBar != CurrentBar:

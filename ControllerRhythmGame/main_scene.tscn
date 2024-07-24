@@ -3,20 +3,19 @@
 [ext_resource type="Script" path="res://Scripts/main_scene.gd" id="1_xkru2"]
 [ext_resource type="PackedScene" uid="uid://cqo7b1ecien0p" path="res://Scenes/main_menu.tscn" id="2_bay5j"]
 [ext_resource type="Script" path="res://Scripts/AudioVisualiser.gd" id="3_mwhjo"]
-[ext_resource type="Texture2D" uid="uid://cp0xbe5ippsjg" path="res://BaseStyle/Sprites/Background/Background.png" id="4_4l8cj"]
-[ext_resource type="Texture2D" uid="uid://c3oqivp1ra4f3" path="res://BaseStyle/Sprites/Background/HorizontalBar.png" id="5_s61ly"]
-[ext_resource type="Texture2D" uid="uid://bir5jxi5u7gkt" path="res://BaseStyle/Sprites/Background/Instructions.png" id="6_eiqet"]
-[ext_resource type="Texture2D" uid="uid://con8pu2svn4f1" path="res://BaseStyle/Sprites/Background/BarHitterFace.png" id="7_qvel5"]
-[ext_resource type="Texture2D" uid="uid://bd2iq1u4i8ylb" path="res://BaseStyle/Sprites/Background/BarHitterShoulder.png" id="8_5p7hm"]
-[ext_resource type="Texture2D" uid="uid://c7xhu08vn2xjk" path="res://BaseStyle/Sprites/Ratings/SilverSquidSmall.png" id="9_panuq"]
-[ext_resource type="Texture2D" uid="uid://b03qpq5mu37fn" path="res://BaseStyle/Sprites/Ratings/GoldSquidSmall.png" id="10_2cxvr"]
-[ext_resource type="Texture2D" uid="uid://dkv31vyi8dhbi" path="res://BaseStyle/Sprites/Background/BackgroundUpgrade.png" id="12_ateoj"]
+[ext_resource type="Texture2D" uid="uid://dff0u1bcfq3ik" path="res://BaseStyle/Sprites/Background/Background.png" id="4_4l8cj"]
+[ext_resource type="Texture2D" uid="uid://do06samlaevil" path="res://BaseStyle/Sprites/Background/HorizontalBar.png" id="5_s61ly"]
+[ext_resource type="Texture2D" uid="uid://cmdal7ep331n3" path="res://BaseStyle/Sprites/Background/Instructions.png" id="6_eiqet"]
+[ext_resource type="Texture2D" uid="uid://c2v5j3gyk57jh" path="res://BaseStyle/Sprites/Background/BarHitterFace.png" id="7_qvel5"]
+[ext_resource type="Texture2D" uid="uid://c3ydw303ehlcy" path="res://BaseStyle/Sprites/Background/BarHitterShoulder.png" id="8_5p7hm"]
+[ext_resource type="Texture2D" uid="uid://daf6240f0bauc" path="res://BaseStyle/Sprites/Ratings/SilverSquidSmall.png" id="9_panuq"]
+[ext_resource type="Texture2D" uid="uid://bfc77n1ri6bwy" path="res://BaseStyle/Sprites/Ratings/GoldSquidSmall.png" id="10_2cxvr"]
+[ext_resource type="Texture2D" uid="uid://brd7mdea2uglw" path="res://BaseStyle/Sprites/Background/BackgroundUpgrade.png" id="12_ateoj"]
 [ext_resource type="FontFile" uid="uid://bl7dl26nc1nyr" path="res://foo.ttf" id="12_gmhep"]
-[ext_resource type="Texture2D" uid="uid://dwwm6i6h0ytwp" path="res://BaseStyle/Sprites/Menus/Bars.png" id="13_ldurc"]
-[ext_resource type="Texture2D" uid="uid://copujvdu4mkp4" path="res://BaseStyle/Sprites/Menus/ButtonInputs.png" id="14_rwp56"]
+[ext_resource type="Texture2D" uid="uid://bi4xqu8b5k06y" path="res://BaseStyle/Sprites/Menus/Bars.png" id="13_ldurc"]
+[ext_resource type="Texture2D" uid="uid://b16lpnf4yrlln" path="res://BaseStyle/Sprites/Menus/ButtonInputs.png" id="14_rwp56"]
 
 [node name="MainScene" type="Node2D"]
-scale = Vector2(3, 3)
 script = ExtResource("1_xkru2")
 
 [node name="MainMenu" parent="." instance=ExtResource("2_bay5j")]
@@ -40,193 +39,185 @@ z_index = -4096
 z_as_relative = false
 
 [node name="Background" type="Sprite2D" parent="Style"]
-position = Vector2(320, 180)
+position = Vector2(960, 540)
 texture = ExtResource("4_4l8cj")
 
 [node name="NoteBar" type="Sprite2D" parent="Style"]
 z_as_relative = false
-position = Vector2(320, 267)
-scale = Vector2(640, 1)
+position = Vector2(960, 801)
+scale = Vector2(1920, 1)
 texture = ExtResource("5_s61ly")
 
 [node name="Instructions" type="Sprite2D" parent="Style"]
-position = Vector2(400, 335)
+position = Vector2(1200, 1005)
 texture = ExtResource("6_eiqet")
 
 [node name="BarHitterFace" type="Sprite2D" parent="Style"]
 z_as_relative = false
-position = Vector2(100, 282.5)
+position = Vector2(300, 847.5)
 texture = ExtResource("7_qvel5")
 
 [node name="BarHitterShoulder" type="Sprite2D" parent="Style"]
 z_as_relative = false
-position = Vector2(100, 251.5)
+position = Vector2(300, 754.5)
 texture = ExtResource("8_5p7hm")
 
 [node name="SilverMedal" type="Sprite2D" parent="Style"]
-position = Vector2(548, 192.667)
+position = Vector2(1644, 579)
 texture = ExtResource("9_panuq")
 
 [node name="GoldMedal" type="Sprite2D" parent="Style"]
-position = Vector2(548, 166.667)
+position = Vector2(1644, 501)
 texture = ExtResource("10_2cxvr")
 
 [node name="TitleMedal" type="Sprite2D" parent="Style"]
-position = Vector2(25, 28.6667)
+position = Vector2(103, 88)
 
-[node name="TextEnhancer" type="Node2D" parent="Style/TitleMedal"]
-scale = Vector2(0.333, 0.333)
-
-[node name="SilverLabel" type="Label" parent="Style/TitleMedal/TextEnhancer"]
-offset_left = 1607.61
-offset_top = 469.47
-offset_right = 1701.61
-offset_bottom = 518.469
+[node name="SilverLabel" type="Label" parent="Style/TitleMedal"]
+offset_left = 1590.0
+offset_top = 466.0
+offset_right = 1684.0
+offset_bottom = 515.0
 theme_override_fonts/font = ExtResource("12_gmhep")
 theme_override_font_sizes/font_size = 40
 text = "1000"
 
-[node name="GoldLabel" type="Label" parent="Style/TitleMedal/TextEnhancer"]
-offset_left = 1607.61
-offset_top = 393.394
-offset_right = 1701.61
-offset_bottom = 442.394
+[node name="GoldLabel" type="Label" parent="Style/TitleMedal"]
+offset_left = 1590.0
+offset_top = 386.0
+offset_right = 1684.0
+offset_bottom = 435.0
 theme_override_fonts/font = ExtResource("12_gmhep")
 theme_override_font_sizes/font_size = 40
 text = "1000"
 
-[node name="Title" type="Label" parent="Style/TitleMedal/TextEnhancer"]
-offset_left = 52.052
-offset_top = -42.042
-offset_right = 334.052
-offset_bottom = 23.958
+[node name="Title" type="Label" parent="Style/TitleMedal"]
+offset_left = 56.0
+offset_top = -31.0
+offset_right = 338.0
+offset_bottom = 35.0
 theme_override_fonts/font = ExtResource("12_gmhep")
 theme_override_font_sizes/font_size = 54
 text = "TEST LABEL"
 
-[node name="TotalLabel" type="Label" parent="Style/TitleMedal/TextEnhancer"]
-offset_left = 1706.71
-offset_top = 495.495
-offset_right = 1822.71
-offset_bottom = 544.495
+[node name="TotalLabel" type="Label" parent="Style/TitleMedal"]
+offset_left = 1688.0
+offset_top = 489.0
+offset_right = 1804.0
+offset_bottom = 538.0
 theme_override_fonts/font = ExtResource("12_gmhep")
 theme_override_font_sizes/font_size = 30
 text = "/1000"
 
 [node name="DANCING" type="Sprite2D" parent="Style"]
-position = Vector2(472.333, 135.333)
+position = Vector2(1416, 405)
 hframes = 36
 
 [node name="ShmoveTimer" type="Timer" parent="Style"]
+
+[node name="BackgroundUpgrade" type="Sprite2D" parent="Style"]
+z_index = -4001
+position = Vector2(660, 366)
+texture = ExtResource("12_ateoj")
+
+[node name="Bars" type="Sprite2D" parent="Style/BackgroundUpgrade"]
+position = Vector2(-495, 0)
+texture = ExtResource("13_ldurc")
+hframes = 16
+frame = 15
+
+[node name="Bars2" type="Sprite2D" parent="Style/BackgroundUpgrade"]
+position = Vector2(-429, 0)
+texture = ExtResource("13_ldurc")
+hframes = 16
+frame = 12
+
+[node name="Bars3" type="Sprite2D" parent="Style/BackgroundUpgrade"]
+position = Vector2(-363, 0)
+texture = ExtResource("13_ldurc")
+hframes = 16
+frame = 11
+
+[node name="Bars4" type="Sprite2D" parent="Style/BackgroundUpgrade"]
+position = Vector2(-297, 0)
+texture = ExtResource("13_ldurc")
+hframes = 16
+frame = 9
+
+[node name="Bars5" type="Sprite2D" parent="Style/BackgroundUpgrade"]
+position = Vector2(-231, 0)
+texture = ExtResource("13_ldurc")
+hframes = 16
+frame = 7
+
+[node name="Bars6" type="Sprite2D" parent="Style/BackgroundUpgrade"]
+position = Vector2(-165, 0)
+texture = ExtResource("13_ldurc")
+hframes = 16
+frame = 5
+
+[node name="Bars7" type="Sprite2D" parent="Style/BackgroundUpgrade"]
+position = Vector2(-99, 0)
+texture = ExtResource("13_ldurc")
+hframes = 16
+frame = 2
+
+[node name="Bars8" type="Sprite2D" parent="Style/BackgroundUpgrade"]
+position = Vector2(-32, 0)
+texture = ExtResource("13_ldurc")
+hframes = 16
+
+[node name="Bars9" type="Sprite2D" parent="Style/BackgroundUpgrade"]
+position = Vector2(32, 0)
+texture = ExtResource("13_ldurc")
+hframes = 16
+
+[node name="Bars10" type="Sprite2D" parent="Style/BackgroundUpgrade"]
+position = Vector2(99, 0)
+texture = ExtResource("13_ldurc")
+hframes = 16
+frame = 1
+
+[node name="Bars11" type="Sprite2D" parent="Style/BackgroundUpgrade"]
+position = Vector2(165, 0)
+texture = ExtResource("13_ldurc")
+hframes = 16
+
+[node name="Bars12" type="Sprite2D" parent="Style/BackgroundUpgrade"]
+position = Vector2(231, 0)
+texture = ExtResource("13_ldurc")
+hframes = 16
+
+[node name="Bars13" type="Sprite2D" parent="Style/BackgroundUpgrade"]
+position = Vector2(297, 0)
+texture = ExtResource("13_ldurc")
+hframes = 16
+frame = 3
+
+[node name="Bars14" type="Sprite2D" parent="Style/BackgroundUpgrade"]
+position = Vector2(363, 0)
+texture = ExtResource("13_ldurc")
+hframes = 16
+frame = 5
+
+[node name="Bars15" type="Sprite2D" parent="Style/BackgroundUpgrade"]
+position = Vector2(429, 0)
+texture = ExtResource("13_ldurc")
+hframes = 16
+frame = 9
+
+[node name="Bars16" type="Sprite2D" parent="Style/BackgroundUpgrade"]
+position = Vector2(495, 0)
+texture = ExtResource("13_ldurc")
+hframes = 16
+frame = 8
 
 [node name="TheFuckMeTimer" type="Timer" parent="."]
 wait_time = 0.001
 one_shot = true
 
-[node name="BackgroundUpgrade" type="Sprite2D" parent="."]
-z_index = -4001
-position = Vector2(220, 122)
-texture = ExtResource("12_ateoj")
-
-[node name="Bars" type="Sprite2D" parent="."]
-position = Vector2(54.9998, 122)
-texture = ExtResource("13_ldurc")
-hframes = 16
-frame = 15
-
-[node name="Bars2" type="Sprite2D" parent="."]
-position = Vector2(77, 122)
-texture = ExtResource("13_ldurc")
-hframes = 16
-frame = 12
-
-[node name="Bars3" type="Sprite2D" parent="."]
-position = Vector2(99, 122)
-texture = ExtResource("13_ldurc")
-hframes = 16
-frame = 11
-
-[node name="Bars4" type="Sprite2D" parent="."]
-position = Vector2(121, 122)
-texture = ExtResource("13_ldurc")
-hframes = 16
-frame = 9
-
-[node name="Bars5" type="Sprite2D" parent="."]
-position = Vector2(143, 122)
-texture = ExtResource("13_ldurc")
-hframes = 16
-frame = 7
-
-[node name="Bars6" type="Sprite2D" parent="."]
-position = Vector2(165, 122)
-texture = ExtResource("13_ldurc")
-hframes = 16
-frame = 5
-
-[node name="Bars7" type="Sprite2D" parent="."]
-position = Vector2(187, 122)
-texture = ExtResource("13_ldurc")
-hframes = 16
-frame = 2
-
-[node name="Bars8" type="Sprite2D" parent="."]
-position = Vector2(209.333, 122)
-texture = ExtResource("13_ldurc")
-hframes = 16
-
-[node name="Bars9" type="Sprite2D" parent="."]
-position = Vector2(231.333, 122)
-texture = ExtResource("13_ldurc")
-hframes = 16
-
-[node name="Bars10" type="Sprite2D" parent="."]
-position = Vector2(253.333, 122)
-texture = ExtResource("13_ldurc")
-hframes = 16
-frame = 1
-
-[node name="Bars11" type="Sprite2D" parent="."]
-position = Vector2(275.333, 122)
-texture = ExtResource("13_ldurc")
-hframes = 16
-
-[node name="Bars12" type="Sprite2D" parent="."]
-position = Vector2(297.333, 122)
-texture = ExtResource("13_ldurc")
-hframes = 16
-
-[node name="Bars13" type="Sprite2D" parent="."]
-position = Vector2(319.333, 122)
-texture = ExtResource("13_ldurc")
-hframes = 16
-frame = 3
-
-[node name="Bars14" type="Sprite2D" parent="."]
-position = Vector2(341.333, 122)
-texture = ExtResource("13_ldurc")
-hframes = 16
-frame = 5
-
-[node name="Bars15" type="Sprite2D" parent="."]
-position = Vector2(363.333, 122)
-texture = ExtResource("13_ldurc")
-hframes = 16
-frame = 9
-
-[node name="Bars16" type="Sprite2D" parent="."]
-position = Vector2(385.333, 122)
-texture = ExtResource("13_ldurc")
-hframes = 16
-frame = 8
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(645.333, 196)
-enabled = false
-zoom = Vector2(0.5, 0.5)
-
 [node name="ButtonInputs" type="Sprite2D" parent="."]
-position = Vector2(582, 65.3333)
+position = Vector2(1746, 195)
 texture = ExtResource("14_rwp56")
 hframes = 2
 
