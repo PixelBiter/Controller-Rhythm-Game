@@ -111,6 +111,7 @@ text = "/1000"
 
 [node name="DANCING" type="Sprite2D" parent="Style"]
 position = Vector2(1416, 405)
+scale = Vector2(3, 3)
 hframes = 36
 
 [node name="ShmoveTimer" type="Timer" parent="Style"]

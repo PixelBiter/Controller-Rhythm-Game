@@ -6,6 +6,7 @@ var SaveFile
 var SaveFileMore
 var ChartBar
 var DanceSpeed = 4
+var PauseInput = false
 
 func _ready():
 	_StyleHolder()
@@ -89,15 +90,17 @@ func _input(event):
 					$AudioPlayers/ShoulderB.playing = true
 		
 		if G.Playing == false:
-			if Input.is_action_just_pressed("MenuRight"):
+			if Input.is_action_just_pressed("MenuRight") and PauseInput == false:
 				S.SongSelected += 1
 				if S.SongSelected > len(S.SongList)-1:
 					S.SongSelected = 0
+				PauseInput = true
 				$TheFuckMeTimer.start()
-			if Input.is_action_just_pressed("MenuLeft"):
+			if Input.is_action_just_pressed("MenuLeft") and PauseInput == false:
 				S.SongSelected -= 1
 				if S.SongSelected < 0:
 					S.SongSelected = len(S.SongList)-1
+				PauseInput = true
 				$TheFuckMeTimer.start()
 
 		if Input.is_action_just_pressed("Start"):
@@ -350,6 +353,7 @@ func _visualiser():
 		$Style/BackgroundUpgrade/Bars16.frame = 0
 
 func _on_the_fuck_me_timer_timeout():
+	PauseInput = false
 	_resetter()
 
 func _on_shmove_timer_timeout():
