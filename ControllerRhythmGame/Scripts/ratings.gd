@@ -13,16 +13,16 @@ func _ready():
 	$BAD/AllSprites.texture = loadimage("user://Cosmetics/BaseStyle/Sprites/Ratings/AllRatings.png")
 	$MISS/MISS.texture = loadimage("user://Cosmetics/BaseStyle/Sprites/Ratings/MISS.png")
 	$MISS/AllSprites.texture = loadimage("user://Cosmetics/BaseStyle/Sprites/Ratings/AllRatings.png")
-	position = Vector2(100,220)
+	position = Vector2(300,660)
 	CustoRate = G.Rating
 	if G.Rating == "FRESH":
 		G.Combo += 1
 		G.Score[1] += 1
 		$FRESH.visible = true
 		if G.Combo > 1:
-			$FRESH/TextEnhancer/Combo.text = str(G.Combo)
+			$FRESH/Combo.text = str(G.Combo)
 		if G.PERFECT == true:
-			$FRESH/TextEnhancer/Combo["theme_override_colors/font_color"]  = Color(1, 0.812, 0.251)
+			$FRESH/Combo["theme_override_colors/font_color"]  = Color(1, 0.812, 0.251)
 		$FRESH/AllSprites.frame -= G.SquidOctoShuffle
 		$FRESH/AllSprites2.frame += G.SquidOctoShuffle
 	elif G.Rating == "GOOD":
@@ -31,7 +31,7 @@ func _ready():
 		G.Score[0] += 1
 		$GOOD.visible = true
 		if G.Combo > 1:
-			$GOOD/TextEnhancer/Combo.text = str(G.Combo)
+			$GOOD/Combo.text = str(G.Combo)
 		$GOOD/AllSprites.frame -= G.SquidOctoShuffle
 	elif G.Rating == "BAD":
 		G.Combo = 0
@@ -60,11 +60,11 @@ func _physics_process(delta):
 	if G.Start > 0 and Input.is_action_just_pressed("Start"):
 		queue_free()
 	if CustoRate == "FRESH":
-		position.y -= 0.3
+		position.y -= 0.9
 	elif CustoRate == "GOOD" or CustoRate == "BAD":
-		position.y -= 0.1
+		position.y -= 0.3
 	elif CustoRate == "MISS":
-		position.y += 0.1
+		position.y += 0.3
 
 func _on_timer_timeout():
 	queue_free()

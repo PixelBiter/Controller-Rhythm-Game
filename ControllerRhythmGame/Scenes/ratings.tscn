@@ -22,26 +22,22 @@ position = Vector2(10, 0)
 texture = ExtResource("2_7mmaq")
 
 [node name="AllSprites" type="Sprite2D" parent="FRESH"]
-position = Vector2(34, 0)
+position = Vector2(78, 0)
 texture = ExtResource("3_rufi3")
 hframes = 8
 frame = 7
 
 [node name="AllSprites2" type="Sprite2D" parent="FRESH"]
-position = Vector2(-33, 0)
+position = Vector2(-118, 0)
 texture = ExtResource("3_rufi3")
 hframes = 8
 frame = 6
 
-[node name="TextEnhancer" type="Node2D" parent="FRESH"]
-position = Vector2(-33, 0)
-scale = Vector2(0.333, 0.333)
-
-[node name="Combo" type="Label" parent="FRESH/TextEnhancer"]
-offset_left = 231.231
-offset_top = -33.033
-offset_right = 271.231
-offset_bottom = -5.03303
+[node name="Combo" type="Label" parent="FRESH"]
+offset_left = 106.0
+offset_top = -35.0
+offset_right = 164.0
+offset_bottom = 31.0
 theme_override_fonts/font = ExtResource("4_bbj6i")
 theme_override_font_sizes/font_size = 54
 
@@ -53,20 +49,16 @@ position = Vector2(21, 0)
 texture = ExtResource("5_uqpie")
 
 [node name="AllSprites" type="Sprite2D" parent="GOOD"]
-position = Vector2(25, 0)
+position = Vector2(32, 0)
 texture = ExtResource("3_rufi3")
 hframes = 8
 frame = 5
 
-[node name="TextEnhancer" type="Node2D" parent="GOOD"]
-position = Vector2(-33, 0)
-scale = Vector2(0.333, 0.333)
-
-[node name="Combo" type="Label" parent="GOOD/TextEnhancer"]
-offset_left = 201.201
-offset_top = -33.033
-offset_right = 241.201
-offset_bottom = -5.03303
+[node name="Combo" type="Label" parent="GOOD"]
+offset_left = 60.0
+offset_top = -36.0
+offset_right = 120.0
+offset_bottom = 33.0
 theme_override_fonts/font = ExtResource("4_bbj6i")
 theme_override_font_sizes/font_size = 56
 
@@ -74,11 +66,11 @@ theme_override_font_sizes/font_size = 56
 visible = false
 
 [node name="BAD" type="Sprite2D" parent="BAD"]
-position = Vector2(24, 0)
+position = Vector2(40, 0)
 texture = ExtResource("6_8wg6j")
 
 [node name="AllSprites" type="Sprite2D" parent="BAD"]
-position = Vector2(20, 0)
+position = Vector2(27, 0)
 texture = ExtResource("3_rufi3")
 hframes = 8
 frame = 3
@@ -91,7 +83,7 @@ position = Vector2(23, 0)
 texture = ExtResource("7_m6ccb")
 
 [node name="AllSprites" type="Sprite2D" parent="MISS"]
-position = Vector2(24, 0)
+position = Vector2(27, 0)
 texture = ExtResource("3_rufi3")
 hframes = 8
 
