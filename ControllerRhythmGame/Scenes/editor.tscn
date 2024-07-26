@@ -369,11 +369,12 @@ theme_override_font_sizes/font_size = 50
 text = "/999"
 
 [node name="BarNumber" type="Label" parent="Visual"]
-offset_left = 138.667
-offset_top = 147.333
-offset_right = 336.667
-offset_bottom = 170.333
+offset_left = 417.0
+offset_top = 444.0
+offset_right = 615.0
+offset_bottom = 499.0
 theme_override_fonts/font = ExtResource("11_ns4j0")
+theme_override_font_sizes/font_size = 45
 text = "1"
 
 [node name="ButtonsA" type="Node2D" parent="."]
