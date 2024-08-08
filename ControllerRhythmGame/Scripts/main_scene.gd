@@ -106,7 +106,7 @@ func _input(event):
 		if Input.is_action_just_pressed("Start"):
 			G.Start = G.Bar
 			if G.Playing == false:
-				$AudioPlayers/Music.playing = true
+				#$AudioPlayers/Music.playing = true
 				$ButtonInputs.frame = 1
 				G.Playing = true
 			else:
@@ -118,9 +118,11 @@ func _input(event):
 		if Input.is_action_just_pressed("Select") and G.Playing == false:
 			get_tree().quit()
 
-func _physics_process(delta):
+func _process(delta):
 	_ScoreKeeper()
 	_visualiser()
+
+func _physics_process(delta):
 	if G.GameReady == true:
 		if G.Playing == true:
 			for a in range(5):
@@ -212,6 +214,10 @@ func _FileReader(EditorThing):
 			DanceSpeed = S.DanceList[SongFileMore.Dance][2]
 		else:
 			$Style/DANCING.texture = null
+		if SongFileMore.has("PreSong"):
+			G.SongDetails[6] = SongFileMore.PreSong
+		else:
+			G.SongDetails[6] = 0
 		SongFile.close()
 		
 	else:
@@ -220,18 +226,26 @@ func _FileReader(EditorThing):
 		G.SongDetails[2] = [float(E.Sig[0]), float(E.Sig[1]), 0]
 		G.SongDetails[3] = E.Music
 		G.SongDetails[4] = E.Name
+		G.SongDetails[6] = E.FramePreSong
 		$AudioPlayers/Music.stream = load_mp3(G.SongDetails[3])
 		$Style/TitleMedal/Title.text = G.SongDetails[4]
 
 func _SongTime():
-	G.TimeIntoSong = $AudioPlayers/Music.get_playback_position() + AudioServer.get_time_since_last_mix() - AudioServer.get_output_latency()
-	if G.Bar > 1:
-		G.BarRound += 1
-		G.TimeLastRead = G.TimeIntoSong
-	if (G.TimeIntoSong-G.TimeLastRead)/(60/(G.SongDetails[0]))/G.SongDetails[2][0] < 0:
-		G.Bar = 0
-	else:
-		G.Bar = ((G.TimeIntoSong-G.TimeLastRead)/(60/(G.SongDetails[0])))/((G.SongDetails[2][0]/G.SongDetails[2][1])*4)
+	if G.Frames < G.SongDetails[6]:
+		G.Frames += 1
+		print(G.Frames)
+	if G.Frames == G.SongDetails[6]:
+		$AudioPlayers/Music.playing = true
+		G.Frames += 1
+	G.TimeIntoSong = $AudioPlayers/Music.get_playback_position() + AudioServer.get_time_since_last_mix() - AudioServer.get_output_latency() + (float(G.Frames)/60)
+	if G.Frames >= G.SongDetails[6]:
+		if G.Bar > 1:
+			G.BarRound += 1
+			G.TimeLastRead = G.TimeIntoSong
+		if (G.TimeIntoSong-G.TimeLastRead)/(60/(G.SongDetails[0]))/G.SongDetails[2][0] < 0:
+			G.Bar = 0
+		else:
+			G.Bar = ((G.TimeIntoSong-G.TimeLastRead)/(60/(G.SongDetails[0])))/((G.SongDetails[2][0]/G.SongDetails[2][1])*4)
 
 func _resetter():
 	G.Note = 0
@@ -249,6 +263,7 @@ func _resetter():
 	G.TotalNotation = 0
 	G.Amount = 0
 	G.PERFECT = true
+	G.Frames = 0
 	ChartBar = G.BarRound
 	_MedalStuff()
 	if E.Save == false:

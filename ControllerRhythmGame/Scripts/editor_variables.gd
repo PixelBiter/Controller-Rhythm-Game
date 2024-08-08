@@ -1,6 +1,6 @@
 extends Node
 
-var EditorDetails = [0.0,[],[],"","",""]
+var EditorDetails = [0.0,[],[],"","","",0]
 var EditorOn = false
 
 var SaveDict
@@ -13,6 +13,7 @@ var Dance = 1
 var BPM = EditorDetails[0]
 var Sig = EditorDetails[2]
 var Chart = EditorDetails[1]
+var FramePreSong = 0
 
 var TotalBars = len(Chart)
 var HoldBarsTotal = TotalBars

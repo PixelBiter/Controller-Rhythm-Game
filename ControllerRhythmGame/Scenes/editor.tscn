@@ -81,7 +81,6 @@ offset_left = 90.0
 offset_top = 292.0
 offset_right = 254.0
 offset_bottom = 336.0
-theme_override_fonts/font = ExtResource("11_ns4j0")
 theme_override_font_sizes/font_size = 36
 text = "Placement"
 
@@ -90,7 +89,6 @@ offset_left = 77.0
 offset_top = 334.0
 offset_right = 265.0
 offset_bottom = 415.0
-theme_override_fonts/font = ExtResource("11_ns4j0")
 theme_override_font_sizes/font_size = 60
 text = "0.5"
 placeholder_text = "Hello (:"
@@ -104,7 +102,6 @@ offset_left = 384.0
 offset_top = 292.0
 offset_right = 458.0
 offset_bottom = 336.0
-theme_override_fonts/font = ExtResource("11_ns4j0")
 theme_override_font_sizes/font_size = 36
 text = "BPM"
 
@@ -113,7 +110,6 @@ offset_left = 328.0
 offset_top = 334.0
 offset_right = 516.0
 offset_bottom = 415.0
-theme_override_fonts/font = ExtResource("11_ns4j0")
 theme_override_font_sizes/font_size = 60
 text = "100"
 placeholder_text = "BPM"
@@ -128,7 +124,6 @@ offset_left = 606.0
 offset_top = 292.0
 offset_right = 764.0
 offset_bottom = 336.0
-theme_override_fonts/font = ExtResource("11_ns4j0")
 theme_override_font_sizes/font_size = 36
 text = "TIME SIG."
 
@@ -137,7 +132,6 @@ offset_left = 597.0
 offset_top = 337.0
 offset_right = 676.0
 offset_bottom = 414.0
-theme_override_fonts/font = ExtResource("11_ns4j0")
 theme_override_font_sizes/font_size = 60
 text = "4"
 placeholder_text = "U"
@@ -148,7 +142,6 @@ offset_left = 686.0
 offset_top = 338.0
 offset_right = 765.0
 offset_bottom = 412.0
-theme_override_fonts/font = ExtResource("11_ns4j0")
 theme_override_font_sizes/font_size = 60
 text = "4"
 placeholder_text = "D"
@@ -175,7 +168,6 @@ offset_left = -110.0
 offset_top = -220.0
 offset_right = 134.0
 offset_bottom = -183.0
-theme_override_fonts/font = ExtResource("11_ns4j0")
 theme_override_font_sizes/font_size = 30
 text = "INITIAL SETTINGS"
 
@@ -184,7 +176,6 @@ offset_left = -172.0
 offset_top = -159.0
 offset_right = -42.0
 offset_bottom = -116.0
-theme_override_fonts/font = ExtResource("11_ns4j0")
 theme_override_font_sizes/font_size = 35
 text = "BPM"
 
@@ -193,7 +184,6 @@ offset_left = 62.0
 offset_top = -159.0
 offset_right = 246.0
 offset_bottom = -104.0
-theme_override_fonts/font = ExtResource("11_ns4j0")
 theme_override_font_sizes/font_size = 35
 text = "TIME SIG
 "
@@ -203,7 +193,6 @@ offset_left = -180.0
 offset_top = -24.0
 offset_right = -50.0
 offset_bottom = 19.0
-theme_override_fonts/font = ExtResource("11_ns4j0")
 theme_override_font_sizes/font_size = 35
 text = "BARS"
 
@@ -212,9 +201,25 @@ offset_left = 74.0
 offset_top = -24.0
 offset_right = 204.0
 offset_bottom = 19.0
-theme_override_fonts/font = ExtResource("11_ns4j0")
 theme_override_font_sizes/font_size = 35
 text = "DANCE"
+
+[node name="Wait" type="Label" parent="Visual/LayoutB/Titles"]
+offset_left = -252.0
+offset_top = 253.0
+offset_right = -99.0
+offset_bottom = 290.0
+theme_override_font_sizes/font_size = 30
+text = "Song Delay (In Frames)"
+
+[node name="WaitNote" type="Label" parent="Visual/LayoutB/Titles/Wait"]
+layout_mode = 0
+offset_left = 194.0
+offset_top = 29.0
+offset_right = 347.0
+offset_bottom = 66.0
+theme_override_font_sizes/font_size = 20
+text = "60 fps"
 
 [node name="BPMInital" type="Node2D" parent="Visual/LayoutB"]
 position = Vector2(-1110, -363)
@@ -224,7 +229,6 @@ offset_left = 852.853
 offset_top = 248.248
 offset_right = 1098.85
 offset_bottom = 300.248
-theme_override_fonts/font = ExtResource("11_ns4j0")
 theme_override_font_sizes/font_size = 30
 text = "100"
 placeholder_text = "Hi Again"
@@ -238,7 +242,6 @@ offset_left = 1158.0
 offset_top = 247.0
 offset_right = 1235.0
 offset_bottom = 316.0
-theme_override_fonts/font = ExtResource("11_ns4j0")
 theme_override_font_sizes/font_size = 50
 text = "4"
 placeholder_text = "U"
@@ -249,7 +252,6 @@ offset_left = 1256.0
 offset_top = 247.0
 offset_right = 1337.0
 offset_bottom = 313.0
-theme_override_fonts/font = ExtResource("11_ns4j0")
 theme_override_font_sizes/font_size = 50
 text = "4"
 placeholder_text = "D"
@@ -263,7 +265,6 @@ offset_left = 920.0
 offset_top = 382.0
 offset_right = 1037.0
 offset_bottom = 447.0
-theme_override_fonts/font = ExtResource("11_ns4j0")
 theme_override_font_sizes/font_size = 40
 text = "10"
 script = ExtResource("7_q4q5d")
@@ -295,7 +296,6 @@ offset_left = 903.0
 offset_top = 469.0
 offset_right = 1372.0
 offset_bottom = 521.0
-theme_override_fonts/font = ExtResource("11_ns4j0")
 theme_override_font_sizes/font_size = 30
 text = "Placeholder Name"
 placeholder_text = "Name Of Song Here"
@@ -309,7 +309,6 @@ offset_left = 908.0
 offset_top = 543.996
 offset_right = 1369.0
 offset_bottom = 580.996
-theme_override_fonts/font = ExtResource("11_ns4j0")
 theme_override_font_sizes/font_size = 24
 script = ExtResource("7_q4q5d")
 
@@ -321,12 +320,23 @@ offset_left = 1128.0
 offset_top = 382.0
 offset_right = 1369.0
 offset_bottom = 413.0
-theme_override_fonts/font = ExtResource("11_ns4j0")
 theme_override_font_sizes/font_size = 22
 item_count = 1
 selected = 0
 popup/item_0/text = ""
 popup/item_0/id = 0
+script = ExtResource("7_q4q5d")
+
+[node name="Wait" type="Node2D" parent="Visual/LayoutB"]
+position = Vector2(-1110, -363)
+
+[node name="WaitTime" type="LineEdit" parent="Visual/LayoutB/Wait"]
+offset_left = 1163.0
+offset_top = 604.0
+offset_right = 1378.0
+offset_bottom = 669.0
+theme_override_font_sizes/font_size = 40
+text = "0"
 script = ExtResource("7_q4q5d")
 
 [node name="LayoutC" type="Sprite2D" parent="Visual"]
@@ -342,7 +352,6 @@ offset_left = 52.0521
 offset_top = 299.299
 offset_right = 481.052
 offset_bottom = 416.299
-theme_override_fonts/font = ExtResource("11_ns4j0")
 theme_override_font_sizes/font_size = 30
 text = "Type: 10
 Position: 0.5
@@ -353,7 +362,6 @@ offset_left = 572.0
 offset_top = 305.0
 offset_right = 677.0
 offset_bottom = 350.0
-theme_override_fonts/font = ExtResource("11_ns4j0")
 theme_override_font_sizes/font_size = 30
 text = "0"
 placeholder_text = "Delete"
@@ -364,18 +372,17 @@ offset_left = 687.688
 offset_top = 299.299
 offset_right = 1116.69
 offset_bottom = 416.299
-theme_override_fonts/font = ExtResource("11_ns4j0")
 theme_override_font_sizes/font_size = 50
 text = "/999"
 
 [node name="BarNumber" type="Label" parent="Visual"]
-offset_left = 417.0
+offset_left = 119.0
 offset_top = 444.0
-offset_right = 615.0
+offset_right = 722.0
 offset_bottom = 499.0
-theme_override_fonts/font = ExtResource("11_ns4j0")
 theme_override_font_sizes/font_size = 45
 text = "1"
+horizontal_alignment = 1
 
 [node name="ButtonsA" type="Node2D" parent="."]
 

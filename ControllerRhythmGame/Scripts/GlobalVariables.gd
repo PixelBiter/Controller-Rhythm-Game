@@ -16,8 +16,10 @@ var BarRound = 0 #The Bar rounded
 var NoteToCheck = 0 #Reset Each Bar, When Going through each note, use this to count them up for their roles
 var TimeLastRead = 0 #Updates when Bar increases
 #60/BPM is how long each bar is
+var FramePreSong = 0
+var Frames = 0
 
-var SongDetails = [0.0,[],[],"","",""]#BPM,Notes,Notations,SongLocation,SongName,Dance
+var SongDetails = [0.0,[],[],"","","",0]#BPM,Notes,Notations,SongLocation,SongName,Dance
 var TotalNotation = 0 #Counts up all used notations
 var Amount = 0 #The amount of hittable notes, gets counted in program
 var Chart = [] #Seperated Chart to make things more organised

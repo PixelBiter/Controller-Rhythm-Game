@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dsjdhpy6x034o"]
+[gd_scene load_steps=14 format=3 uid="uid://dsjdhpy6x034o"]
 
 [ext_resource type="Script" path="res://Scripts/main_scene.gd" id="1_xkru2"]
 [ext_resource type="PackedScene" uid="uid://cqo7b1ecien0p" path="res://Scenes/main_menu.tscn" id="2_bay5j"]
@@ -11,7 +11,6 @@
 [ext_resource type="Texture2D" uid="uid://daf6240f0bauc" path="res://BaseStyle/Sprites/Ratings/SilverSquidSmall.png" id="9_panuq"]
 [ext_resource type="Texture2D" uid="uid://bfc77n1ri6bwy" path="res://BaseStyle/Sprites/Ratings/GoldSquidSmall.png" id="10_2cxvr"]
 [ext_resource type="Texture2D" uid="uid://brd7mdea2uglw" path="res://BaseStyle/Sprites/Background/BackgroundUpgrade.png" id="12_ateoj"]
-[ext_resource type="FontFile" uid="uid://bl7dl26nc1nyr" path="res://foo.ttf" id="12_gmhep"]
 [ext_resource type="Texture2D" uid="uid://bi4xqu8b5k06y" path="res://BaseStyle/Sprites/Menus/Bars.png" id="13_ldurc"]
 [ext_resource type="Texture2D" uid="uid://b16lpnf4yrlln" path="res://BaseStyle/Sprites/Menus/ButtonInputs.png" id="14_rwp56"]
 
@@ -78,7 +77,6 @@ offset_left = 1590.0
 offset_top = 466.0
 offset_right = 1684.0
 offset_bottom = 515.0
-theme_override_fonts/font = ExtResource("12_gmhep")
 theme_override_font_sizes/font_size = 40
 text = "1000"
 
@@ -87,7 +85,6 @@ offset_left = 1590.0
 offset_top = 386.0
 offset_right = 1684.0
 offset_bottom = 435.0
-theme_override_fonts/font = ExtResource("12_gmhep")
 theme_override_font_sizes/font_size = 40
 text = "1000"
 
@@ -96,7 +93,6 @@ offset_left = 56.0
 offset_top = -31.0
 offset_right = 338.0
 offset_bottom = 35.0
-theme_override_fonts/font = ExtResource("12_gmhep")
 theme_override_font_sizes/font_size = 54
 text = "TEST LABEL"
 
@@ -105,7 +101,6 @@ offset_left = 1688.0
 offset_top = 489.0
 offset_right = 1804.0
 offset_bottom = 538.0
-theme_override_fonts/font = ExtResource("12_gmhep")
 theme_override_font_sizes/font_size = 30
 text = "/1000"
 

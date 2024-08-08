@@ -65,6 +65,10 @@ func _loading():
 	E.EditorDetails[3] = SongFileMore.MusicLocation
 	E.EditorDetails[4] = SongFileMore.SongName
 	E.EditorDetails[5] = SongFileMore.Dance
+	if SongFileMore.has("PreSong"):
+		E.EditorDetails[6] = SongFileMore.PreSong
+	else:
+		E.EditorDetails[6] = 0
 	E.Music = E.EditorDetails[3]
 	E.Name = E.EditorDetails[4]
 	E.BPM = E.EditorDetails[0]
@@ -72,15 +76,16 @@ func _loading():
 	E.Chart = E.EditorDetails[1]
 	E.TotalBars = len(E.Chart)
 	E.Dance = E.EditorDetails[5]
+	E.FramePreSong = E.EditorDetails[6]
 	E.HoldBarsTotal = E.TotalBars
 	$Visual/LayoutB/Name/TextEdit.text = E.Name
 	$Visual/LayoutB/BPMInital/TextEdit.text = str(E.BPM)
 	$Visual/LayoutB/SigInital/TextEdit.text = str(E.Sig[0])
 	$Visual/LayoutB/SigInital/TextEdit2.text = str(E.Sig[1])
 	$Visual/LayoutB/BarsTotal/BarTotal.text = str(E.TotalBars)
+	$Visual/LayoutB/Wait/WaitTime.text = str(E.FramePreSong)
 	_PlaceFakeNotes()
 	SongFile.close()
-	
 
 func _Visuals():
 	$Visual/LayoutB/BarsTotal/Bars.text = str(E.TotalBars)
@@ -110,6 +115,7 @@ func _VariableTransfers():
 	else:
 		E.TargetedDeletion = len(E.EditorDetails[1][E.CurrentBar])-1
 		$Visual/LayoutC/Deletion/SelectedDelete.text = str(len(E.EditorDetails[1][E.CurrentBar])-1)
+	E.FramePreSong = int($Visual/LayoutB/Wait/WaitTime.text)
 
 func _NoteType():
 	if $Visual/NoteSelect/Button.button_pressed == true:
@@ -194,7 +200,8 @@ func _on_save_input_event(viewport, event, shape_idx):
 		"NotationU":E.Sig[0],
 		"NotationD":E.Sig[1],
 		"Dance":E.Dance,
-		"NotationType":E.Sig[2]
+		"NotationType":E.Sig[2],
+		"PreSong":E.FramePreSong
 		}
 		E.songsfile = FileAccess.open(S.SongList[S.SongSelected], FileAccess.WRITE)
 		E.SaveStringed = JSON.stringify(E.SaveDict)
