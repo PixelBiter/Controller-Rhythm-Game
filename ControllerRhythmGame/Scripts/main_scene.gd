@@ -239,7 +239,7 @@ func _SongTime():
 		G.Frames += 1
 	G.TimeIntoSong = $AudioPlayers/Music.get_playback_position() + AudioServer.get_time_since_last_mix() - AudioServer.get_output_latency() + (float(G.Frames)/60)
 	if G.Frames >= G.SongDetails[6]:
-		if G.Bar > 1:
+		if G.Bar*2 > 1:
 			G.BarRound += 1
 			G.TimeLastRead = G.TimeIntoSong
 		if (G.TimeIntoSong-G.TimeLastRead)/(60/(G.SongDetails[0]))/G.SongDetails[2][0] < 0:
