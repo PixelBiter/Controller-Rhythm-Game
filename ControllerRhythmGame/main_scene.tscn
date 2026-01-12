@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dsjdhpy6x034o"]
+[gd_scene load_steps=15 format=3 uid="uid://dsjdhpy6x034o"]
 
 [ext_resource type="Script" path="res://Scripts/main_scene.gd" id="1_xkru2"]
 [ext_resource type="PackedScene" uid="uid://cqo7b1ecien0p" path="res://Scenes/main_menu.tscn" id="2_bay5j"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://bfc77n1ri6bwy" path="res://BaseStyle/Sprites/Ratings/GoldSquidSmall.png" id="10_2cxvr"]
 [ext_resource type="Texture2D" uid="uid://brd7mdea2uglw" path="res://BaseStyle/Sprites/Background/BackgroundUpgrade.png" id="12_ateoj"]
 [ext_resource type="Texture2D" uid="uid://bi4xqu8b5k06y" path="res://BaseStyle/Sprites/Menus/Bars.png" id="13_ldurc"]
+[ext_resource type="PackedScene" uid="uid://ikqtwyp6uprm" path="res://Scenes/control_remap.tscn" id="14_eduou"]
 [ext_resource type="Texture2D" uid="uid://b16lpnf4yrlln" path="res://BaseStyle/Sprites/Menus/ButtonInputs.png" id="14_rwp56"]
 
 [node name="MainScene" type="Node2D"]
@@ -216,6 +217,9 @@ one_shot = true
 position = Vector2(1746, 195)
 texture = ExtResource("14_rwp56")
 hframes = 2
+
+[node name="control_remap" parent="." instance=ExtResource("14_eduou")]
+visible = false
 
 [connection signal="timeout" from="Style/ShmoveTimer" to="." method="_on_shmove_timer_timeout"]
 [connection signal="timeout" from="TheFuckMeTimer" to="." method="_on_the_fuck_me_timer_timeout"]

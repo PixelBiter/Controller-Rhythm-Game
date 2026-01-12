@@ -1,0 +1,225 @@
+[gd_scene load_steps=4 format=3 uid="uid://ikqtwyp6uprm"]
+
+[ext_resource type="Script" path="res://Scripts/control_remap.gd" id="1_veqdu"]
+[ext_resource type="Texture2D" uid="uid://bsuww2bdff5r0" path="res://BaseStyle/Sprites/Notes/Face1.png" id="2_bfu3e"]
+[ext_resource type="Texture2D" uid="uid://bc8286knn1eby" path="res://BaseStyle/Sprites/Notes/Shoulder1.png" id="3_ouc0q"]
+
+[node name="control_remap" type="Control"]
+z_index = 255
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_veqdu")
+
+[node name="description" type="Label" parent="."]
+layout_mode = 0
+offset_right = 1925.0
+offset_bottom = 96.0
+theme_override_font_sizes/font_size = 30
+text = "WELCOME TO THE BUTTON REMAPPER!
+To make an input unset, input ESCAPE after pressing the button.
+Notice: Doesn't save after exitting and might be buggy"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -1
+layout_mode = 0
+offset_right = 1912.0
+offset_bottom = 1075.0
+color = Color(0, 0, 0, 0.596078)
+
+[node name="face_icon" type="Sprite2D" parent="."]
+position = Vector2(398, 160)
+texture = ExtResource("2_bfu3e")
+
+[node name="shoulder_icon" type="Sprite2D" parent="."]
+position = Vector2(813, 245)
+texture = ExtResource("3_ouc0q")
+
+[node name="face_desc" type="Label" parent="."]
+layout_mode = 0
+offset_left = 175.0
+offset_top = 278.0
+offset_right = 244.0
+offset_bottom = 443.0
+theme_override_font_sizes/font_size = 20
+text = "Sound A
+
+
+
+
+Sound B"
+
+[node name="shoulder_desc" type="Label" parent="."]
+offset_left = 701.0
+offset_top = 224.0
+offset_right = 770.0
+offset_bottom = 389.0
+theme_override_font_sizes/font_size = 20
+text = "Sound A                Sound B"
+
+[node name="menu_desc" type="Label" parent="."]
+offset_left = 301.0
+offset_top = 545.0
+offset_right = 405.0
+offset_bottom = 738.0
+theme_override_font_sizes/font_size = 20
+text = "Start
+
+Select
+
+MenuLeft
+
+MenuRight"
+horizontal_alignment = 2
+
+[node name="buttons" type="Node2D" parent="."]
+
+[node name="FaceA1" type="Button" parent="buttons"]
+offset_left = 258.0
+offset_top = 254.0
+offset_right = 388.0
+offset_bottom = 290.0
+focus_mode = 0
+text = "FaceA1 (Unset)"
+
+[node name="FaceA2" type="Button" parent="buttons"]
+offset_left = 258.0
+offset_top = 304.0
+offset_right = 388.0
+offset_bottom = 340.0
+focus_mode = 0
+text = "FaceA2 (Unset)"
+
+[node name="FaceA3" type="Button" parent="buttons"]
+offset_left = 410.0
+offset_top = 254.0
+offset_right = 540.0
+offset_bottom = 290.0
+focus_mode = 0
+text = "FaceA3 (Unset)"
+
+[node name="FaceA4" type="Button" parent="buttons"]
+offset_left = 410.0
+offset_top = 304.0
+offset_right = 540.0
+offset_bottom = 340.0
+focus_mode = 0
+text = "FaceA4 (Unset)"
+
+[node name="FaceB1" type="Button" parent="buttons"]
+offset_left = 258.0
+offset_top = 378.0
+offset_right = 388.0
+offset_bottom = 414.0
+focus_mode = 0
+text = "FaceB1 (Unset)"
+
+[node name="FaceB2" type="Button" parent="buttons"]
+offset_left = 258.0
+offset_top = 428.0
+offset_right = 388.0
+offset_bottom = 464.0
+focus_mode = 0
+text = "FaceB2 (Unset)"
+
+[node name="FaceB3" type="Button" parent="buttons"]
+offset_left = 410.0
+offset_top = 378.0
+offset_right = 540.0
+offset_bottom = 414.0
+focus_mode = 0
+text = "FaceB3 (Unset)"
+
+[node name="FaceB4" type="Button" parent="buttons"]
+offset_left = 410.0
+offset_top = 428.0
+offset_right = 540.0
+offset_bottom = 464.0
+focus_mode = 0
+text = "FaceB4 (Unset)"
+
+[node name="ShoulderA1" type="Button" parent="buttons"]
+offset_left = 673.0
+offset_top = 254.0
+offset_right = 803.0
+offset_bottom = 290.0
+focus_mode = 0
+text = "ShoulderA1 (Unset)"
+
+[node name="ShoulderA2" type="Button" parent="buttons"]
+offset_left = 673.0
+offset_top = 304.0
+offset_right = 803.0
+offset_bottom = 340.0
+focus_mode = 0
+text = "ShoulderA2 (Unset)"
+
+[node name="ShoulderB1" type="Button" parent="buttons"]
+offset_left = 825.0
+offset_top = 254.0
+offset_right = 955.0
+offset_bottom = 290.0
+focus_mode = 0
+text = "ShoulderB1 (Unset)"
+
+[node name="ShoulderB2" type="Button" parent="buttons"]
+offset_left = 825.0
+offset_top = 304.0
+offset_right = 955.0
+offset_bottom = 340.0
+focus_mode = 0
+text = "ShoulderB2 (Unset)"
+
+[node name="Start" type="Button" parent="buttons"]
+offset_left = 413.0
+offset_top = 543.0
+offset_right = 543.0
+offset_bottom = 579.0
+focus_mode = 0
+text = "Start (Unset)"
+
+[node name="Select" type="Button" parent="buttons"]
+offset_left = 413.0
+offset_top = 593.0
+offset_right = 543.0
+offset_bottom = 629.0
+focus_mode = 0
+text = "Select (Unset)"
+
+[node name="MenuLeft" type="Button" parent="buttons"]
+offset_left = 413.0
+offset_top = 647.0
+offset_right = 543.0
+offset_bottom = 683.0
+focus_mode = 0
+text = "MenuLeft (Unset)"
+
+[node name="MenuRight" type="Button" parent="buttons"]
+offset_left = 413.0
+offset_top = 697.0
+offset_right = 543.0
+offset_bottom = 733.0
+focus_mode = 0
+text = "MenuRight (Unset)"
+
+[connection signal="pressed" from="buttons/FaceA1" to="." method="_remap_button" binds= ["FaceA1"]]
+[connection signal="pressed" from="buttons/FaceA2" to="." method="_remap_button" binds= ["FaceA2"]]
+[connection signal="pressed" from="buttons/FaceA3" to="." method="_remap_button" binds= ["FaceA3"]]
+[connection signal="pressed" from="buttons/FaceA4" to="." method="_remap_button" binds= ["FaceA4"]]
+[connection signal="pressed" from="buttons/FaceB1" to="." method="_remap_button" binds= ["FaceB1"]]
+[connection signal="pressed" from="buttons/FaceB2" to="." method="_remap_button" binds= ["FaceB2"]]
+[connection signal="pressed" from="buttons/FaceB3" to="." method="_remap_button" binds= ["FaceB3"]]
+[connection signal="pressed" from="buttons/FaceB4" to="." method="_remap_button" binds= ["FaceB4"]]
+[connection signal="pressed" from="buttons/ShoulderA1" to="." method="_remap_button" binds= ["ShoulderA1"]]
+[connection signal="pressed" from="buttons/ShoulderA2" to="." method="_remap_button" binds= ["ShoulderA2"]]
+[connection signal="pressed" from="buttons/ShoulderB1" to="." method="_remap_button" binds= ["ShoulderB1"]]
+[connection signal="pressed" from="buttons/ShoulderB2" to="." method="_remap_button" binds= ["ShoulderB2"]]
+[connection signal="pressed" from="buttons/Start" to="." method="_remap_button" binds= ["Start"]]
+[connection signal="pressed" from="buttons/Select" to="." method="_remap_button" binds= ["Select"]]
+[connection signal="pressed" from="buttons/MenuLeft" to="." method="_remap_button" binds= ["MenuLeft"]]
+[connection signal="pressed" from="buttons/MenuRight" to="." method="_remap_button" binds= ["MenuRight"]]

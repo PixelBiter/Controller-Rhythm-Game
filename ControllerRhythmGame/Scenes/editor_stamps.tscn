@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://bma8twoeuj2s1"]
+
+[ext_resource type="Texture2D" uid="uid://bc8286knn1eby" path="res://BaseStyle/Sprites/Notes/Shoulder1.png" id="1_86u2a"]
+[ext_resource type="Script" path="res://Scripts/editor_stamps.gd" id="2_a6wni"]
+
+[node name="EditorStamps" type="Sprite2D"]
+texture = ExtResource("1_86u2a")
+offset = Vector2(0, 45)
+script = ExtResource("2_a6wni")

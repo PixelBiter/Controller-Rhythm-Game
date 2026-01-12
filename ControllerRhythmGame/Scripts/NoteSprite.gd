@@ -52,16 +52,16 @@ func loadimage(path):
 	var loadtexture = ImageTexture.create_from_image(loadimage)
 	return loadtexture
 
-func _process(delta):
+func _process(_delta):
 	if Note != null:
 		if Note == G.NoteToHit :
-			if global_position.x < 300 + (G.SongDetails[0]*0.4) and global_position.x > 300 - (G.SongDetails[0]*0.3):
+			if global_position.x < 300 + (G.SongDetails[0]*0.4*G.ScrollSpeed) and global_position.x > 300 - (G.SongDetails[0]*0.3*G.ScrollSpeed):
 				if G.InputsAdded == Req:
 					_effect()
 					_ranking()
 				elif Req[0] < G.InputsAdded[0] or Req[1] < G.InputsAdded[1]:
 					_miss()
-			if global_position.x < 300 - (G.SongDetails[0]*0.3):
+			if global_position.x < 300 - (G.SongDetails[0]*0.3*G.ScrollSpeed):
 				G.Combo = 0
 				G.NoteToHit += 1
 				G.Inputs = [[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]]
@@ -72,9 +72,9 @@ func _process(delta):
 				queue_free()
 
 func _ranking():
-	if global_position.x < 300 + (G.SongDetails[0]*0.15) and global_position.x > 300 - (G.SongDetails[0]*0.15):
+	if global_position.x < 300 + (G.SongDetails[0]*0.18*G.ScrollSpeed) and global_position.x > 300 - (G.SongDetails[0]*0.18*G.ScrollSpeed):
 		G.Rating = "FRESH"
-	elif global_position.x < 300 + (G.SongDetails[0]*0.3) and global_position.x > 300 - (G.SongDetails[0]*0.3):
+	elif global_position.x < 300 + (G.SongDetails[0]*0.3*G.ScrollSpeed) and global_position.x > 300 - (G.SongDetails[0]*0.3*G.ScrollSpeed):
 		G.Rating = "GOOD"
 	else:
 		G.Rating = "BAD"

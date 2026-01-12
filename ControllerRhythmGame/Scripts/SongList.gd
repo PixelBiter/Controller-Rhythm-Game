@@ -4,6 +4,7 @@ var SongList = []
 var SongSelected = 0
 var Medals = {}
 var DanceList = {}
+var PlayerSettings = {}
 
 func _ready():
 	var SongRead = FileAccess.open("user://ChartList.txt", FileAccess.READ)
@@ -12,3 +13,9 @@ func _ready():
 	DanceList = JSON.parse_string(DanceRead.get_as_text())
 	var MedalRead = FileAccess.open("user://Medals.txt", FileAccess.READ)
 	Medals = JSON.parse_string(MedalRead.get_as_text())
+	var PlayerSettingsList = FileAccess.open("user://PlayerSettings.txt", FileAccess.READ)
+	PlayerSettings = JSON.parse_string(PlayerSettingsList.get_as_text())
+	_PlayerSetup()
+
+func _PlayerSetup():
+	G.ScrollSpeed = PlayerSettings["ScrollSpeed"]

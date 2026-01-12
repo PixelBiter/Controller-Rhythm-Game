@@ -13,7 +13,7 @@ func _ready():
 	_FileReader(E.EditorOn)
 	_resetter()
 
-func _input(event):
+func _input(_event):
 	if G.GameReady == true:
 		if G.Playing == true:
 			if Input.is_action_just_pressed("FaceA1"):
@@ -106,7 +106,6 @@ func _input(event):
 		if Input.is_action_just_pressed("Start"):
 			G.Start = G.Bar
 			if G.Playing == false:
-				#$AudioPlayers/Music.playing = true
 				$ButtonInputs.frame = 1
 				G.Playing = true
 			else:
@@ -118,13 +117,13 @@ func _input(event):
 		if Input.is_action_just_pressed("Select") and G.Playing == false:
 			get_tree().quit()
 
-func _process(delta):
+func _process(_delta):
 	_ScoreKeeper()
 	_visualiser()
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	if G.GameReady == true:
-		if G.Playing == true:
+		if G.Playing == true or E.EditorPause == true:
 			for a in range(5):
 				G.Inputs[5-a] = G.Inputs[4-a]
 			G.Inputs[0] = [0,0]
@@ -233,7 +232,6 @@ func _FileReader(EditorThing):
 func _SongTime():
 	if G.Frames < G.SongDetails[6]:
 		G.Frames += 1
-		print(G.Frames)
 	if G.Frames == G.SongDetails[6]:
 		$AudioPlayers/Music.playing = true
 		G.Frames += 1

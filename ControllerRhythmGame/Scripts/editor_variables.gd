@@ -29,6 +29,7 @@ var EditorExtraNote = ["",0]
 var EditorDisplayNotation = [4,4,0]
 
 var Save = false
+var EditorPause = false
 
 var songsfile
 var SaveStringed

@@ -30,6 +30,7 @@ func _process(delta):
 	_VariableTransfers()
 	_Visuals()
 	_LoadAnother()
+	#_Stamp()
 
 func _LoadAnother():
 	if Input.is_action_just_pressed("MenuLeft") or Input.is_action_just_pressed("MenuRight"):
@@ -165,6 +166,15 @@ func _PlaceFakeBars():
 		var Bar = load("res://Scenes/editor_notes.tscn")
 		var bar = Bar.instantiate()
 		$BarHolding.add_child(bar)
+
+#func _Stamp():  #Unused due to not being helpful
+#	if Input.is_action_just_pressed("PauseEditor"):
+#		if E.EditorPause == true:
+#			E.EditorPause = false
+#			$main_scene/AudioPlayers/Music.stream_paused = true
+#		else:
+#			E.EditorPause = true
+#			$main_scene/AudioPlayers/Music.stream_paused = false
 
 func _on_reload_timer_timeout():
 	E.Reload = false

@@ -48,7 +48,7 @@ func loadimage(path):
 	var loadtexture = ImageTexture.create_from_image(loadimage)
 	return loadtexture
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	if $Note.global_position.y < -30:
 		queue_free()
 	if G.Playing != true:

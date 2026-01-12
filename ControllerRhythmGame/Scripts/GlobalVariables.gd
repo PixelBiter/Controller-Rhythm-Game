@@ -38,7 +38,10 @@ var BPM = SongDetails[0]
 var Offset = (TimeIntoSong * BPM * 3)
 var Offset2 = 0
 
-func _process(delta):
+################### Player Options ######################
+var ScrollSpeed = 1 #How fast the notes scroll
+
+func _process(_delta):
 	InputsAdded = [Inputs[0][0] + Inputs[1][0] + Inputs[2][0] + Inputs[3][0] + Inputs[4][0] + Inputs[5][0],Inputs[0][1] + Inputs[1][1] + Inputs[2][1] + Inputs[3][1] + Inputs[4][1] + Inputs[5][1]]
 	if SongDetails[0] != BPM:
 		Offset2 += ((TimeIntoSong-TimeTaken) * BPM * 3)
@@ -46,7 +49,7 @@ func _process(delta):
 		BPM = G.SongDetails[0]
 	Offset = -((TimeIntoSong- TimeTaken) * G.BPM * 3) - Offset2
 
-func _input(event):
+func _input(_event):
 	if Input.is_action_just_released("FaceA1"):
 		G.HeldInputs[0] = 0
 	if Input.is_action_just_released("FaceA2"):
