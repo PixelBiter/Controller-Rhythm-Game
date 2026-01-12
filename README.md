@@ -20,7 +20,7 @@ The sprites and sfx can be edited as wanted just by replacing their files in the
 
 To edit a chart in the editor you have to follow the add new chart and then just enter the editor and move to that song to begin editing.
 
-
+12/01/2025 Update - You can now access a keybind menu by pressing 'Escape' to allow keyboard controls.
 
 To note, this program is most likely very buggy as this is practically my first proper project and was started as a way for me to better learn coding.
 I will try to address any bugs found although I can't guarantee that I will fix it.
